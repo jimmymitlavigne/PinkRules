@@ -1,6 +1,7 @@
 # > Adobe
 HOST-SUFFIX,adobe.io,Adobe
 HOST-SUFFIX,adobe.com,Adobe
+HOST-SUFFIX,adobedtm.com,Adobe
 HOST-SUFFIX,adobess.com,Adobe
 HOST-SUFFIX,typekit.com,Adobe
 HOST-SUFFIX,adobelogin.com,Adobe
@@ -15,3 +16,4 @@ HOST-SUFFIX,adobetag.com,Adobe
 HOST-SUFFIX,behance.net,Adobe
 HOST-SUFFIX,adobegenuine.com,Adobe
 HOST-KEYWORD,adobe,Adobe
+HOST-KEYWORD,behance,Adobe
