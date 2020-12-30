@@ -2,6 +2,7 @@
 USER-AGENT,*com.google.Drive*
 DOMAIN-SUFFIX,docs.google.com
 DOMAIN-SUFFIX,drive.google.com
+DOMAIN-SUFFIX,mtalk.google.com
 DOMAIN-SUFFIX,googledrive.com
 DOMAIN-SUFFIX,googleusercontent.com
-DOMAIN-KEYWORD,www.google.
+DOMAIN-KEYWORD,google
