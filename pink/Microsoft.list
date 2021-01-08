@@ -1,4 +1,6 @@
 # > Microsoft
+USER-AGENT,OneDrive*,Microsoft
+DOMAIN-KEYWORD,onedrive,Microsoft
 DOMAIN-SUFFIX,aadrm.com
 DOMAIN-SUFFIX,acompli.com
 DOMAIN-SUFFIX,acompli.net
@@ -79,3 +81,4 @@ DOMAIN-SUFFIX,windowsupdate.com
 DOMAIN-SUFFIX,wunderlist.com
 DOMAIN-SUFFIX,yammer.com
 DOMAIN-SUFFIX,yammerusercontent.com
+DOMAIN,oneclient.sfx.ms,Microsoft
