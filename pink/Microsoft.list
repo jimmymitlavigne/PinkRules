@@ -1,6 +1,8 @@
 # > Microsoft
 USER-AGENT,OneDrive*,Microsoft
 DOMAIN-KEYWORD,onedrive,Microsoft
+DOMAIN-SUFFIX,livefilestore.com,Microsoft
+DOMAIN-SUFFIX,1drv.com,Microsoft
 DOMAIN-SUFFIX,aadrm.com
 DOMAIN-SUFFIX,acompli.com
 DOMAIN-SUFFIX,acompli.net
