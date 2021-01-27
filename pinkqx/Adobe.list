@@ -1,4 +1,5 @@
 # > Adobe
+USER-AGENT,creativecloud*,Adobe
 HOST-SUFFIX,adobe.io,Adobe
 HOST-SUFFIX,adobe.com,Adobe
 HOST-SUFFIX,adobedtm.com,Adobe
