@@ -98,6 +98,7 @@ HOST-SUFFIX,microsoftonline-p.net,Microsoft
 HOST-SUFFIX,microsoftstream.com,Microsoft
 HOST-SUFFIX,microsofttranslator.com,Microsoft
 HOST-SUFFIX,microsoft-tst.com,Microsoft
+HOST-KEYWORD,onedrive,Microsoft
 HOST-KEYWORD,microsoft,Microsoft
-HOST-KEYWORD,1drv.com,Microsoft
+HOST-KEYWORD,1drv,Microsoft
 HOST,oneclient.sfx.ms,Microsoft
