@@ -1,4 +1,5 @@
 # > Notion
+USER-AGENT,Notion*,Notion
 HOST-SUFFIX,notion.so,Notion
 HOST-SUFFIX,loggly.com,Notion
 HOST-SUFFIX,segment.com,Notion
