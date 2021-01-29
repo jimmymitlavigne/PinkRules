@@ -1,9 +1,6 @@
 # > Microsoft
 USER-AGENT,Microsoft*,Microsoft
 USER-AGENT,OneDrive*,Microsoft
-HOST-KEYWORD,microsoft,Microsoft
-HOST-KEYWORD,1drv.com,Microsoft
-HOST,oneclient.sfx.ms,Microsoft
 HOST-SUFFIX,1drv.com,Microsoft
 HOST-SUFFIX,aadrm.com,Microsoft
 HOST-SUFFIX,acompli.com,Microsoft
@@ -101,3 +98,6 @@ HOST-SUFFIX,Microsoftonline-p.net,Microsoft
 HOST-SUFFIX,Microsoftstream.com,Microsoft
 HOST-SUFFIX,Microsofttranslator.com,Microsoft
 HOST-SUFFIX,Microsoft-tst.com,Microsoft
+HOST-KEYWORD,microsoft,Microsoft
+HOST-KEYWORD,1drv.com,Microsoft
+HOST,oneclient.sfx.ms,Microsoft
