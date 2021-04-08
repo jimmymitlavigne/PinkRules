@@ -1,8 +1,16 @@
 # > TV
 HOST-SUFFIX,91mjw.com,TV
 HOST-SUFFIX,jable.tv,TV
+;这里是里站
 HOST-SUFFIX,e-hentai.org,TV
 HOST-SUFFIX,exhentai.org,TV
 HOST-KEYWORD,exhentai,TV
+;这里是Emby
+HOST-SUFFIX,emby.nexitally.com,TV
+HOST-SUFFIX,plusmedia.site,TV
+HOST-SUFFIX,mickeycloud.com,TV
+HOST-SUFFIX,emby.wtf,TV
+;这里是影视
 HOST-KEYWORD,91mjw,TV
 HOST-KEYWORD,jable,TV
+HOST-KEYWORD,emby,TV
