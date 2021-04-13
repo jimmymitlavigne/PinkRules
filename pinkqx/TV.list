@@ -18,4 +18,5 @@ HOST-KEYWORD,emby,TV
 ;这里是xfinity
 HOST-SUFFIX,xfinityoncampus.com,TV
 HOST-SUFFIX,xfinity.com,TV
+HOST-SUFFIX,xcal.tv,TV
 HOST-KEYWORD,xfinity,TV
