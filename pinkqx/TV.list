@@ -15,3 +15,7 @@ HOST-SUFFIX,emby.maying.club,TV
 HOST-KEYWORD,91mjw,TV
 HOST-KEYWORD,jable,TV
 HOST-KEYWORD,emby,TV
+;这里是xfinity
+HOST-SUFFIX,xfinityoncampus.com,TV
+HOST-SUFFIX,xfinity.com,TV
+HOST-KEYWORD,xfinity,TV
