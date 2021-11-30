@@ -20,7 +20,7 @@ obj = {
     "profile": {
       "uid": 700000000,
       "nickname": "Viola",
-      "avatar": "https://i.loli.net/2020/07/04/NBrHSoDL1TEfdjX.png"
+      "avatar": "https://raw.githubusercontent.com/jimmymitlavigne/pinkrule/master/icon/ac.png"
     }
   },
   "error": "",
