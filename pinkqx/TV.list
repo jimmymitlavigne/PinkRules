@@ -30,6 +30,6 @@ HOST-SUFFIX,captainverify.com,TV
 HOST-SUFFIX,fanatical.com,TV
 HOST-SUFFIX,humblebundle.com,TV
 HOST-SUFFIX,steam-chat.com,TV
-HOST-UFFIX,steamcommunity.com,TV
-HOST-UFFIX,steampowered.com,TV
+HOST-SUFFIX,steamcommunity.com,TV
+HOST-SUFFIX,steampowered.com,TV
 HOST-SUFFIX,steamstatic.com,TV
