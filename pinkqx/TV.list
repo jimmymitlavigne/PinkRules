@@ -38,3 +38,6 @@ HOST-KEYWORD,steam,TV
 ;spark
 HOST-SUFFIX,sparkmailapp.com,TV
 HOST-KEYWORD,sparkmail,TV
+;ARTSTATION
+HOST-SUFFIX,artstation.com,TV
+HOST-KEYWORD,artstation,TV
