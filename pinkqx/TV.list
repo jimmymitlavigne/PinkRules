@@ -42,6 +42,6 @@ HOST-KEYWORD,sparkmail,TV
 HOST-SUFFIX,artstation.com,TV
 HOST-KEYWORD,artstation,TV
 ;lol
-host-suffix,pvp.net,Game
-host-suffix,riotgames.com,Game
-host-suffix,riotcdn.net,Game
+host-suffix,pvp.net,TV
+host-suffix,riotgames.com,TV
+host-suffix,riotcdn.net,TV
