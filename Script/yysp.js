@@ -7,7 +7,7 @@
 [rewrite_local]
 
 # > 鱿鱼视频解锁会员
-^https?:\/\/api\.youyu.*\/api\/account\/loginBy(Phone|Password)$ url script-response-body 
+^https?:\/\/api\.youyu.*\/api\/account\/loginBy(Phone|Password)$ url script-response-body https://raw.githubusercontent.com/jimmymitlavigne/PinkRules/master/Script/yysp.js
 
 [mitm] 
 
