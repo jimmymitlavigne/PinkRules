@@ -1,0 +1,11 @@
+# > Paramount+
+USER-AGENT,PPlus*,Paramount+
+HOST-SUFFIX,cbsi.com,Paramount+
+HOST-SUFFIX,cbsaavideo.com,Paramount+
+HOST-SUFFIX,cbsivideo.com,Paramount+
+HOST-SUFFIX,paramountplus.com,Paramount+
+HOST-SUFFIX,pplusstatic.com,Paramount+
+HOST,cbsi.live.ott.irdeto.com,Paramount+
+HOST,cbsplaylistserver.aws.syncbak.com,Paramount+
+HOST,cbsservice.aws.syncbak.com,Paramount+
+HOST,link.theplatform.com,Paramount+
