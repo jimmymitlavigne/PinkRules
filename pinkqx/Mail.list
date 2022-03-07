@@ -1,7 +1,7 @@
 # > Mail
 HOST-SUFFIX,mail.icloud.com.cn,Mail
 HOST-SUFFIX,mail.me.com,Mail
-HOST-SUFFIX,imap.gmail.com,Mail
-HOST-SUFFIX,smtp.gmail.com,Mail
-HOST-SUFFIX,gmail.com,Mail
+;HOST-SUFFIX,imap.gmail.com,Mail
+;HOST-SUFFIX,smtp.gmail.com,Mail
+;HOST-SUFFIX,gmail.com,Mail
 
