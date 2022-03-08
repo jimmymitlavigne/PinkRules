@@ -2,6 +2,7 @@
 USER-AGENT,Hulu*,Hulu
 HOST-SUFFIX,cws-hulu.conviva.com,Hulu
 HOST-SUFFIX,hulu.com,Hulu
+HOST-SUFFIX,secure.hulu.com,Hulu
 HOST-SUFFIX,hulu.hb.omtrdc.net,Hulu
 HOST-SUFFIX,hulu.sc.omtrdc.net,Hulu
 HOST-SUFFIX,huluad.com,Hulu
