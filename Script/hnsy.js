@@ -9,7 +9,7 @@ https:\/\/bookapi\.ihuman\.com\/(v1\/get\_user\_info|v1\/get\_purchase\_list) ur
 
 MITM = bookapi.ihuman.com
 
-*/
+
 
 const path1 = "/v1/get_purchase_list";
 const path2 = "/v1/get_user_info";
@@ -28,3 +28,15 @@ if ($request.url.indexOf(path2) != -1){
 
 
 $done({body: JSON.stringify(obj)});
+
+*/
+const path1 = ""\/v3\/get_book_info";
+let key = {"is_vip": 0"};
+let obj = JSON.parse($response.body);
+
+if ($request.url.indexOf(path1) != -1){
+	obj.result["is_vip\"\\s*:\\s*\\d"] = key;	
+}
+
+$done({body: JSON.stringify(obj)});
+
