@@ -31,7 +31,7 @@ $done({body: JSON.stringify(obj)});
 
 */
 const path = ""/v3/get_book_info";
-let key = {"is_vip": 0"};
+let key = {"is_vip": 0};
 let obj = JSON.parse($response.body);
 
 if ($request.url.indexOf(path1) != -1){
