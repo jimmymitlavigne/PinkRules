@@ -35,7 +35,7 @@ let key = {"is_vip": 0"};
 let obj = JSON.parse($response.body);
 
 if ($request.url.indexOf(path1) != -1){
-	obj.result["is_vip\"\\s*:\\s*\\d"] = key;	
+	obj.result["is_vip"] = key;	
 }
 
 $done({body: JSON.stringify(obj)});
