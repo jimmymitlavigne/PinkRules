@@ -8,4 +8,4 @@ HOST-SUFFIX,disneystreaming.com,Disney+
 HOST-SUFFIX,dssott.com,Disney+
 HOST-SUFFIX,disneyjunior.com,Disney+
 HOST-SUFFIX,registerdisney.go.com,Disney+
-HOST,cdn.registerdisney.go.com,Disney+
+:HOST,cdn.registerdisney.go.com,Disney+
