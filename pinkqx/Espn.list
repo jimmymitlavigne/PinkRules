@@ -6,6 +6,8 @@ HOST-SUFFIX,espn.net,Espn
 HOST-SUFFIX,espncdn.com,Espn
 HOST-SUFFIX,espncricinfo.com,Espn
 HOST-SUFFIX,optimizely.com,Espn
+HOST-SUFFIX,bamgrid.com,Espn
+HOST-SUFFIX,global.edge.bamgrid.com,Espn
 HOST-KEYWORD,espn,Espn
 HOST-KEYWORD,optimizely,Espn
 
