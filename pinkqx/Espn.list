@@ -10,4 +10,6 @@ HOST-SUFFIX,bamgrid.com,Espn
 HOST-SUFFIX,global.edge.bamgrid.com,Espn
 HOST-KEYWORD,espn,Espn
 HOST-KEYWORD,optimizely,Espn
+HOST-SUFFIX,registerdisney.go.com,Espn
+HOST-SUFFIX,cdn.registerdisney.go.com,Espn
 
