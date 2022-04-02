@@ -3,6 +3,8 @@ USER-AGENT,PPlus*,Paramount+
 HOST-SUFFIX,cbsi.com,Paramount+
 HOST-SUFFIX,cbsaavideo.com,Paramount+
 HOST-SUFFIX,cbsivideo.com,Paramount+
+HOST-SUFFIX,pubads.g.doubleclick.net,Paramount+
+HOST-SUFFIX,saa.cbsi.com,Paramount+
 HOST-SUFFIX,paramountplus.com,Paramount+
 HOST-SUFFIX,s0.2mdn.net,Paramount+
 HOST-SUFFIX,pplusstatic.com,Paramount+
