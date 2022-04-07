@@ -48,3 +48,7 @@ HOST-KEYWORD,artstation,TV
 host-suffix,pvp.net,TV
 host-suffix,riotgames.com,TV
 host-suffix,riotcdn.net,TV
+;homedesign
+HOST-SUFFIX,homestyler.com,TV
+HOST-KEYWORD,homestyler,TV
+
