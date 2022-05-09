@@ -3,6 +3,7 @@ HOST-SUFFIX,91mjw.com,TV
 HOST-SUFFIX,jable.tv,TV
 HOST-SUFFIX,onlyfans.com,TV
 HOST-SUFFIX,opensubtitles.org,TV
+HOST-SUFFIX,hanime1.com,TV
 ;这里是里站
 HOST-SUFFIX,e-hentai.org,TV
 HOST-SUFFIX,exhentai.org,TV
@@ -17,6 +18,7 @@ HOST-SUFFIX,emby.maying.club,TV
 HOST-KEYWORD,91mjw,TV
 HOST-KEYWORD,jable,TV
 HOST-KEYWORD,emby,TV
+HOST-KEYWORD,hanime1,TV
 ;这里是xfinity
 HOST-SUFFIX,xfinityoncampus.com,TV
 HOST-SUFFIX,xfinity.com,TV
