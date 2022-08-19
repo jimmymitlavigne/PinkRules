@@ -10,3 +10,23 @@ HOST-SUFFIX,huluim.com,Hulu
 HOST-SUFFIX,hulustream.com,Hulu
 HOST-SUFFIX,akamaihd.net,Hulu
 HOST-KEYWORD,hulu,Hulu
+# > Amazon Hulu
+USER-AGENT,InstantVideo.US*,Hulu
+USER-AGENT,Prime%20Video*,Hulu
+HOST-SUFFIX,aiv-cdn.net,Hulu
+HOST-SUFFIX,aiv-delivery.net,Hulu
+HOST-SUFFIX,amazonvideo.com,Hulu
+HOST-SUFFIX,media-amazon.com,Hulu
+HOST-SUFFIX,primevideo.com,Hulu
+HOST-SUFFIX,pv-cdn.net,Hulu
+HOST,atv-ps.amazon.com,Hulu
+HOST,fls-na.amazon.com,Hulu
+HOST,avodmp4s3ww-a.akamaihd.net,Hulu
+HOST,d25xi40x97liuc.cloudfront.net,Hulu
+HOST,dmqdd6hw24ucf.cloudfront.net,Hulu
+HOST,dmqdd6hw24ucf.cloudfront.net,Hulu
+HOST,d22qjgkvxw22r6.cloudfront.net,Hulu
+HOST,d1v5ir2lpwr8os.cloudfront.net,Hulu
+HOST,d27xxe7juh1us6.cloudfront.net,Hulu
+HOST,www.amazon.com,Hulu
+HOST-KEYWORD,avoddashs,Hulu
