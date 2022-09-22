@@ -6,5 +6,9 @@ HOST-SUFFIX,docs.google.com,Google
 HOST-SUFFIX,drive.google.com,Google
 HOST-SUFFIX,googledrive.com,Google
 HOST-SUFFIX,googleusercontent.com,Google
+HOST-SUFFIX,imap.gmail.com,Google
+HOST-SUFFIX,smtp.gmail.com,Google
+HOST-SUFFIX,gmail.com,Google
 HOST-KEYWORD,www.google.,Google
 HOST-KEYWORD,google,Google
+HOST-KEYWORD,gmail,Google
