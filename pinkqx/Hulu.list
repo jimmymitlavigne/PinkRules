@@ -30,3 +30,14 @@ HOST,d1v5ir2lpwr8os.cloudfront.net,Hulu
 HOST,d27xxe7juh1us6.cloudfront.net,Hulu
 HOST,amazon.com,Hulu
 HOST-KEYWORD,avoddashs,Hulu
+# > Espn
+USER-AGENT,espn*,Hulu
+HOST-SUFFIX,es.pn,Hulu
+HOST-SUFFIX,espn.com,Hulu
+HOST-SUFFIX,espn.net,Hulu
+HOST-SUFFIX,espncdn.com,Hulu
+HOST-SUFFIX,espncricinfo.com,Hulu
+HOST-SUFFIX,optimizely.com,Hulu
+HOST-SUFFIX,espn.global.edge.bamgrid.com,Hulu
+HOST-KEYWORD,espn,Hulu
+;HOST-KEYWORD,optimizely,Espn
