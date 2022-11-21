@@ -40,6 +40,7 @@ HOST-SUFFIX,espncdn.com,Hulu
 HOST-SUFFIX,espncricinfo.com,Hulu
 HOST-SUFFIX,optimizely.com,Hulu
 HOST-SUFFIX,espn.global.edge.bamgrid.com,Hulu
+HOST-SUFFIX,espn.api.edge.bamgrid.com,Hulu
 HOST-SUFFIX,espn.connections.edge.bamgrid.com,Hulu
 HOST-KEYWORD,espn,Hulu
 HOST-KEYWORD,optimizely,Hulu
