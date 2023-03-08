@@ -12,3 +12,5 @@ HOST-SUFFIX,gmail.com,Google
 HOST-KEYWORD,www.google.,Google
 HOST-KEYWORD,google,Google
 ;HOST-KEYWORD,gmail,Google
+HOST-SUFFIX,prod.brass.cloud.cupronickel.goog,Google
+HOST-SUFFIX,prod.zinc.cloud.cupronickel.goog,Google
