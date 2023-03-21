@@ -29,5 +29,9 @@ HOST-SUFFIX,shapr3d.com,AC
 HOST-SUFFIX,glados.network,AC
 HOST-KEYWORD,glados,AC
 HOST-KEYWORD,shapr3d,AC
+HOST-SUFFIX,kraken.com,AC
+HOST-SUFFIX,coinbase.com,AC
+HOST-KEYWORD,kraken,AC
+HOST-KEYWORD,coinbase,AC
 
 
