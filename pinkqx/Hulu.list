@@ -30,6 +30,9 @@ HOST,d1v5ir2lpwr8os.cloudfront.net,Hulu
 HOST,d27xxe7juh1us6.cloudfront.net,Hulu
 HOST,amazon.com,Hulu
 HOST-KEYWORD,avoddashs,Hulu
+HOST-KEYWORD,amazon,Hulu
+HOST-KEYWORD,primevideo,Hulu
+HOST-KEYWORD,prime-video,Hulu
 # > Espn
 USER-AGENT,espn*,Hulu
 HOST-SUFFIX,es.pn,Hulu
