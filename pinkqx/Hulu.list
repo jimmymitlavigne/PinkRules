@@ -32,7 +32,6 @@ HOST,amazon.com,Hulu
 HOST-KEYWORD,avoddashs,Hulu
 HOST-KEYWORD,amazon,Hulu
 HOST-KEYWORD,primevideo,Hulu
-HOST-KEYWORD,prime-video,Hulu
 # > Espn
 USER-AGENT,espn*,Hulu
 HOST-SUFFIX,es.pn,Hulu
