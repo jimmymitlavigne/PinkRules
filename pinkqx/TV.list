@@ -60,6 +60,8 @@ HOST-KEYWORD,homestyler,TV
 HOST-SUFFIX,credit.com,TV
 HOST-SUFFIX,capitalone.com,TV
 HOST-SUFFIX,uscreditcardguide.com,TV
-
+;shapr
+HOST-SUFFIX,shapr3d.com,AC
+HOST-KEYWORD,shapr3d,AC
 
 
