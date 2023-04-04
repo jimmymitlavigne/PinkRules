@@ -31,5 +31,6 @@ HOST-SUFFIX,kraken.com,AC
 HOST-SUFFIX,coinbase.com,AC
 HOST-KEYWORD,kraken,AC
 HOST-KEYWORD,coinbase,AC
-
+HOST-SUFFIX,discord.com,AC
+HOST-KEYWORD,discord,AC
 
