@@ -1,0 +1,27 @@
+# > pikpak
+;pikpak
+HOST-SUFFIX,access.mypikpak.com,Storage
+HOST-SUFFIX,access.mypikpak.net,Storage
+HOST-SUFFIX,adjust.mypikpak.com,Storage
+HOST-SUFFIX,api-audit.mypikpak.com,Storage
+HOST-SUFFIX,api-drive.mypikpak.com,Storage
+HOST-SUFFIX,api-drive.mypikpak.net,Storage
+HOST-SUFFIX,api-feedback.mypikpak.com,Storage
+HOST-SUFFIX,config.mypikpak.com,Storage
+;HOST-SUFFIX,copyright.mypikpak.com,Storage
+HOST-SUFFIX,drive.mypikpak.com,Storage
+HOST-SUFFIX,feedback.mypikpak.com,Storage
+HOST-SUFFIX,i.mypikpak.com,Storage
+HOST-SUFFIX,inapp.mypikpak.com,Storage
+HOST-SUFFIX,info.mypikpak.com,Storage
+HOST-SUFFIX,pay-gateway.mypikpak.com,Storage
+HOST-SUFFIX,pay-gateway.mypikpak.net,Storage
+HOST-SUFFIX,pay.mypikpak.com,Storage
+HOST-SUFFIX,pay.mypikpak.net,Storage
+HOST-SUFFIX,static.mypikpak.com,Storage
+HOST-SUFFIX,toapp.mypikpak.com,Storage
+HOST-SUFFIX,user.mypikpak.com,Storage
+HOST-SUFFIX,user.mypikpak.net,Storage
+;HOST-SUFFIX,www.copyright.mypikpak.com,Storage
+HOST-SUFFIX,www.drive.mypikpak.com,Storage
+HOST-SUFFIX,www.mypikpak.com,Storage
