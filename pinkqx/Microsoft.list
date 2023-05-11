@@ -102,3 +102,26 @@ HOST-KEYWORD,onedrive,Microsoft
 HOST-KEYWORD,microsoft,Microsoft
 HOST-KEYWORD,1drv,Microsoft
 HOST,oneclient.sfx.ms,Microsoft
+
+# > pikpak
+;HOST-SUFFIX,copyright.mypikpak.com,Microsoft
+;HOST-SUFFIX,www.copyright.mypikpak.com,Microsoft
+HOST-SUFFIX,access.mypikpak.com,Microsoft
+HOST-SUFFIX,access.mypikpak.net,Microsoft
+HOST-SUFFIX,adjust.mypikpak.com,Microsoft
+HOST-SUFFIX,api-audit.mypikpak.com,Microsoft
+HOST-SUFFIX,api-feedback.mypikpak.com,Microsoft
+HOST-SUFFIX,drive.mypikpak.com,Microsoft
+HOST-SUFFIX,feedback.mypikpak.com,Microsoft
+HOST-SUFFIX,i.mypikpak.com,Microsoft
+HOST-SUFFIX,inapp.mypikpak.com,Microsoft
+HOST-SUFFIX,info.mypikpak.com,Microsoft
+HOST-SUFFIX,pay.mypikpak.com,Microsoft
+HOST-SUFFIX,pay.mypikpak.net,Microsoft
+HOST-SUFFIX,pay-gateway.mypikpak.com,Microsoft
+HOST-SUFFIX,pay-gateway.mypikpak.net,Microsoft
+HOST-SUFFIX,static.mypikpak.com,Microsoft
+HOST-SUFFIX,toapp.mypikpak.com,Microsoft
+HOST-SUFFIX,user.mypikpak.net,Microsoft
+HOST-SUFFIX,www.drive.mypikpak.com,Microsoft
+HOST-SUFFIX,www.mypikpak.com,Microsoft
