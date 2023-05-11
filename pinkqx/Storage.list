@@ -5,7 +5,7 @@ HOST-SUFFIX,config.mypikpak.com,Storage
 HOST-SUFFIX,rev5-sp.mypikpak.com,Storage
 HOST-SUFFIX,user.mypikpak.com,Storage
 HOST-SUFFIX,onedrive.com,Storage
-HOST-SUFFIX,live.com,Storage
+;HOST-SUFFIX,live.com,Storage
 HOST-SUFFIX,mesh.com,Storage
 HOST-SUFFIX,sfx.ms,Storage
 HOST-SUFFIX,microsoft.com,Storage
