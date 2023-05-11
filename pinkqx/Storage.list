@@ -7,6 +7,7 @@ HOST-SUFFIX,user.mypikpak.com,Storage
 HOST-SUFFIX,onedrive.com,Storage
 ;HOST-SUFFIX,live.com,Storage
 HOST-SUFFIX,mesh.com,Storage
+HOST-SUFFIX,api.onedrive.com,Storage
 HOST-SUFFIX,sfx.ms,Storage
 HOST-SUFFIX,microsoft.com,Storage
 HOST-SUFFIX,office.com,Storage
