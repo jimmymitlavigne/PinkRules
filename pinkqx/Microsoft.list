@@ -1,7 +1,7 @@
 # > Microsoft
 USER-AGENT,Microsoft*,Microsoft
 USER-AGENT,OneDrive*,Microsoft
-HOST-SUFFIX,1drv.com,Microsoft
+;HOST-SUFFIX,1drv.com,Microsoft
 HOST-SUFFIX,aadrm.com,Microsoft
 HOST-SUFFIX,acompli.com,Microsoft
 HOST-SUFFIX,acompli.net,Microsoft
@@ -19,7 +19,7 @@ HOST-SUFFIX,cloudapp.net,Microsoft
 HOST-SUFFIX,cloudappsecurity.com,Microsoft
 HOST-SUFFIX,edgesuite.net,Microsoft
 HOST-SUFFIX,fabric.io,Microsoft
-HOST-SUFFIX,files.1drv.com,Microsoft
+;HOST-SUFFIX,files.1drv.com,Microsoft
 HOST-SUFFIX,getmicrosoftkey.com,Microsoft
 HOST-SUFFIX,gfx.ms,Microsoft
 HOST-SUFFIX,hotmail.com,Microsoft
@@ -100,7 +100,7 @@ HOST-SUFFIX,microsofttranslator.com,Microsoft
 HOST-SUFFIX,microsoft-tst.com,Microsoft
 HOST-KEYWORD,onedrive,Microsoft
 HOST-KEYWORD,microsoft,Microsoft
-HOST-KEYWORD,1drv,Microsoft
+;HOST-KEYWORD,1drv,Microsoft
 HOST,oneclient.sfx.ms,Microsoft
 
 # > pikpak
