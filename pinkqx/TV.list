@@ -24,6 +24,8 @@ HOST-KEYWORD,emby,TV
 HOST-KEYWORD,hanime1,TV
 HOST-KEYWORD,javdb,TV
 HOST-SUFFIX,javdb.com,TV
+HOST-SUFFIX,javbus.com,TV
+HOST-KEYWORD,javbus,TV
 ;这里是xfinity
 HOST-SUFFIX,xfinityoncampus.com,TV
 HOST-SUFFIX,xfinity.com,TV
