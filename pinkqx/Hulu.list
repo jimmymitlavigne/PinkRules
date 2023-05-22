@@ -19,6 +19,10 @@ HOST-SUFFIX,amazonvideo.com,Hulu
 HOST-SUFFIX,media-amazon.com,Hulu
 HOST-SUFFIX,primevideo.com,Hulu
 HOST-SUFFIX,pv-cdn.net,Hulu
+HOST-SUFFIX,amazon.co,Hulu
+HOST-SUFFIX,amazon.com,Hulu
+HOST-SUFFIX,amazonaws.com,Hulu
+HOST-SUFFIX,unagi.amazon.com,Hulu
 HOST,atv-ps.amazon.com,Hulu
 HOST,fls-na.amazon.com,Hulu
 HOST,avodmp4s3ww-a.akamaihd.net,Hulu
@@ -28,7 +32,6 @@ HOST,dmqdd6hw24ucf.cloudfront.net,Hulu
 HOST,d22qjgkvxw22r6.cloudfront.net,Hulu
 HOST,d1v5ir2lpwr8os.cloudfront.net,Hulu
 HOST,d27xxe7juh1us6.cloudfront.net,Hulu
-HOST,amazon.com,Hulu
 HOST-KEYWORD,avoddashs,Hulu
 HOST-KEYWORD,amazon,Hulu
 HOST-KEYWORD,primevideo,Hulu
