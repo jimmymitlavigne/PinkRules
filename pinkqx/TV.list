@@ -67,5 +67,8 @@ HOST-SUFFIX,uscreditcardguide.com,TV
 ;shapr
 HOST-SUFFIX,shapr3d.com,TV
 HOST-KEYWORD,shapr3d,TV
+;OpenSubtitles
+HOST-SUFFIX,opensubtitles.com,TV
+HOST-KEYWORD,opensubtitles,TV
 
 
