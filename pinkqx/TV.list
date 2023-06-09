@@ -70,5 +70,7 @@ HOST-KEYWORD,shapr3d,TV
 ;OpenSubtitles
 HOST-SUFFIX,opensubtitles.com,TV
 HOST-KEYWORD,opensubtitles,TV
-
+;小红书
+HOST-SUFFIX,xiaohongshu.com,TV
+HOST-KEYWORD,xiaohongshu,TV
 
