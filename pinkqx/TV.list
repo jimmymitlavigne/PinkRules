@@ -72,5 +72,7 @@ HOST-SUFFIX,opensubtitles.com,TV
 HOST-KEYWORD,opensubtitles,TV
 ;小红书
 HOST-SUFFIX,xiaohongshu.com,TV
+HOST-SUFFIX,xhscdn.com,TV
 HOST-KEYWORD,xiaohongshu,TV
+HOST-KEYWORD,xhscdn,TV
 
