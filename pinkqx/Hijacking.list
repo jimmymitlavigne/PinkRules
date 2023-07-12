@@ -175,7 +175,6 @@ HOST-SUFFIX,zryydi.com,REJECT
 # > Adobe Flash China Special Edition
 # https://www.zhihu.com/question/281163698/answer/441388130
 HOST-SUFFIX,flash.cn,REJECT
-HOST,geo2.adobe.com,REJECT
 # > C&J Marketing
 # https://www.zhihu.com/question/46746200
 HOST-SUFFIX,4009997658.com,REJECT
