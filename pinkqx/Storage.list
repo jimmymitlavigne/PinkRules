@@ -16,3 +16,7 @@ HOST-SUFFIX,api.onedrive.com,Storage
 HOST-SUFFIX,public.sn.files.1drv.com,Storage
 HOST-KEYWORD,dl-a,Storage
 HOST-KEYWORD,files.1drv.com,Storage
+# > misakaf
+HOST-SUFFIX,misakaf.org,Storage
+HOST-KEYWORD,misakaf,Storage
+
