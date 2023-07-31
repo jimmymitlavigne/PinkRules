@@ -1,0 +1,12 @@
+# > News
+# USER-AGENT,apple%20news*
+USER-AGENT,News*
+DOMAIN-SUFFIX,gateway.icloud.com
+DOMAIN-SUFFIX,gspe1-ssl.ls.apple.com
+DOMAIN-SUFFIX,apple.news
+DOMAIN-SUFFIX,news-assets.apple.com
+DOMAIN-SUFFIX,news-client.apple.com
+DOMAIN-SUFFIX,news-edge.apple.com
+DOMAIN-SUFFIX,news-events.apple.com
+DOMAIN-SUFFIX,apple.comscoreresearch.com
+DOMAIN-KEYWORD,applenews

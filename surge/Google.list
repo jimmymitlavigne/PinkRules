@@ -1,0 +1,16 @@
+# > Google
+USER-AGENT,%E4%BA%91%E7%AB%AF%E7%A1%AC%E7%9B%98*
+USER-AGENT,Google.Drive*
+USER-AGENT,*com.google.Drive*
+DOMAIN-SUFFIX,docs.google.com
+DOMAIN-SUFFIX,drive.google.com
+DOMAIN-SUFFIX,googledrive.com
+DOMAIN-SUFFIX,googleusercontent.com
+DOMAIN-SUFFIX,imap.gmail.com
+DOMAIN-SUFFIX,smtp.gmail.com
+DOMAIN-SUFFIX,gmail.com
+DOMAIN-KEYWORD,www.google.
+DOMAIN-KEYWORD,google
+;DOMAIN-KEYWORD,gmail
+DOMAIN-SUFFIX,prod.brass.cloud.cupronickel.goog
+DOMAIN-SUFFIX,prod.zinc.cloud.cupronickel.goog

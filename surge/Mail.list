@@ -1,0 +1,7 @@
+# > Mail
+DOMAIN-SUFFIX,mail.icloud.com.cn
+DOMAIN-SUFFIX,mail.me.com
+;DOMAIN-SUFFIX,imap.gmail.com
+;DOMAIN-SUFFIX,smtp.gmail.com
+;DOMAIN-SUFFIX,gmail.com
+

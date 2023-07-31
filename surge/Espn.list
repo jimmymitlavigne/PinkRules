@@ -1,0 +1,11 @@
+# > Espn
+USER-AGENT,espn*
+DOMAIN-SUFFIX,es.pn
+DOMAIN-SUFFIX,espn.com
+DOMAIN-SUFFIX,espn.net
+DOMAIN-SUFFIX,espncdn.com
+DOMAIN-SUFFIX,espncricinfo.com
+DOMAIN-SUFFIX,optimizely.com
+DOMAIN-SUFFIX,espn.global.edge.bamgrid.com
+DOMAIN-KEYWORD,espn
+DOMAIN-KEYWORD,optimizely

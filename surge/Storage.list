@@ -1,0 +1,22 @@
+# > pikpak
+DOMAIN-SUFFIX,api-drive.mypikpak.com
+DOMAIN-SUFFIX,api-drive.mypikpak.net
+DOMAIN-SUFFIX,config.mypikpak.com
+DOMAIN-SUFFIX,rev5-sp.mypikpak.com
+DOMAIN-SUFFIX,user.mypikpak.com
+;;DOMAIN-SUFFIX,onedrive.com
+;DOMAIN-SUFFIX,live.com
+;;DOMAIN-SUFFIX,mesh.com
+;DOMAIN-SUFFIX,sfx.ms
+;DOMAIN-SUFFIX,microsoft.com
+;DOMAIN-SUFFIX,office.com
+;DOMAIN-SUFFIX,fabric.io
+;DOMAIN-SUFFIX,sharepoint.com
+DOMAIN-SUFFIX,api.onedrive.com
+DOMAIN-SUFFIX,public.sn.files.1drv.com
+DOMAIN-KEYWORD,dl-a
+DOMAIN-KEYWORD,files.1drv.com
+# > misakaf
+DOMAIN-SUFFIX,misakaf.org
+DOMAIN-KEYWORD,misakaf
+
