@@ -3,11 +3,11 @@
 USER-AGENT,News*,News
 ;HOST-SUFFIX,gateway.icloud.com,News
 ;HOST-SUFFIX,gspe1-ssl.ls.apple.com,News
-;HOST-SUFFIX,apple.news,News
-;HOST-SUFFIX,news-assets.apple.com,News
-;HOST-SUFFIX,news-client.apple.com,News
-;HOST-SUFFIX,news-edge.apple.com,News
-;HOST-SUFFIX,news-events.apple.com,News
+HOST-SUFFIX,apple.news,News
+HOST-SUFFIX,news-assets.apple.com,News
+HOST-SUFFIX,news-client.apple.com,News
+HOST-SUFFIX,news-edge.apple.com,News
+HOST-SUFFIX,news-events.apple.com,News
 ;HOST-SUFFIX,apple.comscoreresearch.com,News
 HOST-KEYWORD,applenews,News
 
