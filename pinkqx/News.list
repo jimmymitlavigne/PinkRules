@@ -3,22 +3,22 @@
 USER-AGENT,News*,News
 ;HOST-SUFFIX,gateway.icloud.com,News
 ;HOST-SUFFIX,gspe1-ssl.ls.apple.com,News
-;HOST-SUFFIX,apple.news,News
-;HOST-SUFFIX,news-assets.apple.com,News
-;HOST-SUFFIX,news-client.apple.com,News
-;HOST-SUFFIX,news-edge.apple.com,News
-;HOST-SUFFIX,news-events.apple.com,News
+HOST-SUFFIX,apple.news,News
+HOST-SUFFIX,news-assets.apple.com,News
+HOST-SUFFIX,news-client.apple.com,News
+HOST-SUFFIX,news-edge.apple.com,News
+HOST-SUFFIX,news-events.apple.com,News
 ;HOST-SUFFIX,apple.comscoreresearch.com,News
 HOST-KEYWORD,applenews,News
 
 
 
 # > News
-host, news-edge.apple.com,News
-host, news-events.apple.com,News
+;host, news-edge.apple.com,News
+;host, news-events.apple.com,News
 host, apple.comscoreresearch.com,News
 HOST-SUFFIX,newsletter-edge.apple.com,News
 # News+ Audio
 # URL-REGEX,^https?:\/\/news-assets\.apple\.com\/(audio-narrative|podcast\/audio)\/.*,News
 # Quantumult X unsupported URL-REGEX Type
-host, news-assets.apple.com,News
+;host, news-assets.apple.com,News
