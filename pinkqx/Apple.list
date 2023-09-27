@@ -32,3 +32,4 @@ HOST-SUFFIX,mzstatic.com,Apple
 HOST,api.smoot.apple.cn,Apple
 HOST-SUFFIX,upload.googleapis.com,Apple
 HOST-SUFFIX,safebrowsing.googleapis.com,Apple
+HOST-SUFFIX,content-storage-upload.googleapis.com,Apple
