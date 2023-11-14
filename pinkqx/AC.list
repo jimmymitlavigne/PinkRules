@@ -38,3 +38,5 @@ HOST-KEYWORD,openai,AC
 ;shapr
 HOST-SUFFIX,shapr3d.com,AC
 HOST-KEYWORD,shapr3d,AC
+HOST-SUFFIX,maxon.net,AC
+HOST-KEYWORD,maxon,AC
