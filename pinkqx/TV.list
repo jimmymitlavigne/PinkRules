@@ -47,6 +47,7 @@ HOST-SUFFIX,steampowered.com,TV
 HOST-SUFFIX,steamstatic.com,TV
 HOST-SUFFIX,api.steampowered.com,TV
 HOST-KEYWORD,steam,TV
+HOST-KEYWORD,steampowered,TV
 ;spark
 HOST-SUFFIX,sparkmailapp.com,TV
 HOST-KEYWORD,sparkmail,TV
