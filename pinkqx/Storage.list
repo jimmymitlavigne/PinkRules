@@ -20,5 +20,5 @@ HOST-KEYWORD,files.1drv.com,Storage
 HOST-SUFFIX,misakaf.org,Storage
 HOST-SUFFIX,push-kr.misakaf.org,Storage
 HOST-KEYWORD,misakaf,Storage
-;IP-CIDR,102.223.180.108,Storage
+IP-CIDR,102.223.180.108/24,Storage
 
