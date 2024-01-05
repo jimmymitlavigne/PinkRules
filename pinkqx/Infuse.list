@@ -1,7 +1,13 @@
-;emby
+# > emby
 HOST-SUFFIX,emby.wtf,Infuse
 HOST-SUFFIX,emby.maying.club,Infuse
 HOST-SUFFIX,emby.nexitally.com,Infuse
 HOST-SUFFIX,plusmedia.site,Infuse
 HOST-SUFFIX,mickeycloud.com,Infuse
 HOST-KEYWORD,emby,Infuse
+
+# > misakaf
+HOST-SUFFIX,misakaf.org,Infuse
+HOST-SUFFIX,push-kr.misakaf.org,Infuse
+HOST-KEYWORD,misakaf,Infuse
+IP-CIDR,102.223.180.108/24,Infuse
