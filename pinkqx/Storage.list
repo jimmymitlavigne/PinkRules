@@ -18,5 +18,7 @@ HOST-KEYWORD,dl-a,Storage
 HOST-KEYWORD,files.1drv.com,Storage
 # > misakaf
 HOST-SUFFIX,misakaf.org,Storage
+HOST-SUFFIX,push-kr.misakaf.org,Storage
 HOST-KEYWORD,misakaf,Storage
+
 
