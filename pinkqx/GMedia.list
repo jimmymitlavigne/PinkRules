@@ -19,22 +19,11 @@ HOST-SUFFIX,amazonaws.com,GMedia
 HOST-SUFFIX,amazonvideo.com,GMedia
 HOST-SUFFIX,llnwd.net,GMedia
 
-# > Apple News and Apple Map TOMTOM Version
-# USER-AGENT,AppleNews*,GMedia
-# USER-AGENT,com.apple.news*,GMedia
-# HOST,gspe1-ssl.ls.apple.com,GMedia
-# USER-AGENT,News*,GMedia
-# HOST,apple.comscoreresearch.com,GMedia
-# HOST,gateway.icloud.com,GMedia
-# HOST,news-client.apple.com,GMedia
-# HOST,news-edge.apple.com,GMedia
-# HOST,news-events.apple.com,GMedia
-# HOST-SUFFIX,apple.news,GMedia
 
 # > Apple TV
-HOST,np-edge.itunes.apple.com,GMedia
-HOST,play-edge.itunes.apple.com,GMedia
-HOST-SUFFIX,tv.apple.com,GMedia
+;HOST,np-edge.itunes.apple.com,GMedia
+;HOST,play-edge.itunes.apple.com,GMedia
+;HOST-SUFFIX,tv.apple.com,GMedia
 
 # > Bahamut
 USER-AGENT,Anime*,GMedia
@@ -95,25 +84,8 @@ HOST-SUFFIX,akamaized.net,GMedia
 HOST-SUFFIX,foxplus.com,GMedia
 HOST-SUFFIX,theplatform.com,GMedia
 
-# > HBO NOW & HBO GO
-USER-AGENT,HBO%20NOW*,GMedia
-HOST-SUFFIX,execute-api.ap-southeast-1.amazonaws.com,GMedia
-HOST-SUFFIX,hbo.com,GMedia
-HOST-SUFFIX,hboasia.com,GMedia
-HOST-SUFFIX,hbogo.com,GMedia
-HOST-SUFFIX,hbogoasia.com,GMedia
-HOST-SUFFIX,hbogoasia.hk,GMedia
-HOST-SUFFIX,hbonow.com,GMedia
-HOST-SUFFIX,hbomax.com,GMedia
 
-# > Hulu(フールー)
-HOST-SUFFIX,happyon.jp,GMedia
-HOST-SUFFIX,hulu.jp,GMedia
 
-# > Hulu
-HOST-SUFFIX,hulu.com,GMedia
-HOST-SUFFIX,huluim.com,GMedia
-HOST-SUFFIX,hulustream.com,GMedia
 
 # > Japonx
 HOST-KEYWORD,japonx,GMedia
@@ -154,30 +126,6 @@ USER-AGENT,mytv*,GMedia
 HOST-SUFFIX,mytvsuper.com,GMedia
 HOST-SUFFIX,tvb.com,GMedia
 
-# > Netflix
-USER-AGENT,Argo*,GMedia
-HOST-SUFFIX,netflix.com,GMedia
-HOST-SUFFIX,netflix.net,GMedia
-HOST-SUFFIX,nflxext.com,GMedia
-HOST-SUFFIX,nflximg.com,GMedia
-HOST-SUFFIX,nflximg.net,GMedia
-HOST-SUFFIX,nflxso.net,GMedia
-HOST-SUFFIX,nflxvideo.net,GMedia
-IP-CIDR,8.41.4.0/24,GMedia
-IP-CIDR,23.246.0.0/18,GMedia
-IP-CIDR,37.77.184.0/21,GMedia
-IP-CIDR,45.57.0.0/17,GMedia
-IP-CIDR,64.120.128.0/17,GMedia
-IP-CIDR,66.197.128.0/17,GMedia
-IP-CIDR,69.53.224.0/19,GMedia
-IP-CIDR,108.175.32.0/20,GMedia
-IP-CIDR,185.2.220.0/22,GMedia
-IP-CIDR,185.9.188.0/22,GMedia
-IP-CIDR,192.173.64.0/18,GMedia
-IP-CIDR,198.38.96.0/19,GMedia
-IP-CIDR,198.45.48.0/20,GMedia
-IP-CIDR,207.45.72.0/22,GMedia
-IP-CIDR,208.75.76.0/22,GMedia
 
 # > Pandora
 HOST-SUFFIX,pandora.com,GMedia
@@ -190,14 +138,6 @@ HOST-SUFFIX,pbs.org,GMedia
 USER-AGENT,SoundCloud*,GMedia
 HOST-SUFFIX,sndcdn.com,GMedia
 HOST-SUFFIX,soundcloud.com,GMedia
-
-# > Spotify
-USER-AGENT,*Spotify*,GMedia
-HOST-SUFFIX,pscdn.co,GMedia
-HOST-SUFFIX,scdn.co,GMedia
-HOST-SUFFIX,spoti.fi,GMedia
-HOST-SUFFIX,spotify.com,GMedia
-HOST-SUFFIX,spotifycdn.net,GMedia
 
 # > ViuTV
 USER-AGENT,ViuTV*,GMedia
