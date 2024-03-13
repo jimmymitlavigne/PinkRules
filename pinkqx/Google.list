@@ -3,7 +3,7 @@ USER-AGENT,%E4%BA%91%E7%AB%AF%E7%A1%AC%E7%9B%98*,Google
 USER-AGENT,Google.Drive*,Google
 USER-AGENT,*com.google.Drive*,Google
 HOST-SUFFIX,cloud.cupronickel.goog,Google
-HOST-SUFFIX,googleapis.com
+HOST-SUFFIX,googleapis.com,Google
 HOST-SUFFIX,docs.google.com,Google
 HOST-SUFFIX,drive.google.com,Google
 HOST-SUFFIX,googledrive.com,Google
