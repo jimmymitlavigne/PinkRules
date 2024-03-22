@@ -1,6 +1,7 @@
 ;cs
 HOST-SUFFIX,douban.com,Work
 HOST-KEYWORD,douban,Work
+HOST-KEYWORD,doubanio,Work
 HOST-SUFFIX,weibo.cn,Work
 HOST-SUFFIX,weibo.com,Work
 HOST-SUFFIX,toutiao.com,Work
