@@ -7,5 +7,5 @@ HOST-SUFFIX,weibo.com,Work
 HOST-SUFFIX,toutiao.com,Work
 HOST-SUFFIX,jinritoutiao.com,Work
 HOST-SUFFIX,toutiaoimg.com,Work
-HOST-SUFFIX,zhihu.com,AC
-HOST-KEYWORD,zhihu,AC
+HOST-SUFFIX,zhihu.com,Work
+HOST-KEYWORD,zhihu,Work
