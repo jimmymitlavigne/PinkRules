@@ -31,8 +31,10 @@ HOST-KEYWORD,kraken,AC
 HOST-KEYWORD,coinbase,AC
 HOST-SUFFIX,discord.com,AC
 HOST-KEYWORD,discord,AC
+;chatgpt
 HOST-SUFFIX,openai.com,AC
 HOST-KEYWORD,openai,AC
+HOST-KEYWORD,chatgpt,AC
 ;shapr
 HOST-SUFFIX,shapr3d.com,AC
 HOST-KEYWORD,shapr3d,AC
