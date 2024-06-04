@@ -35,10 +35,8 @@ HOST-KEYWORD,discord,AC
 ;HOST-SUFFIX,openai.com,AC
 ;HOST-KEYWORD,openai,AC
 ;HOST-KEYWORD,chatgpt,AC
-HOST,api.statsig.com,AC
 HOST,api-iam.intercom.io,AC
 HOST,browser-intake-datadoghq.com,AC
-HOST,chatgpt.livekit.cloud,AC
 HOST,o33249.ingest.sentry.io,AC
 HOST,openaiapi-site.azureedge.net,AC
 HOST,sfo3.turn.livekit.cloud,AC
