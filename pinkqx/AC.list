@@ -35,6 +35,14 @@ HOST-KEYWORD,discord,AC
 HOST-SUFFIX,openai.com,AC
 HOST-KEYWORD,openai,AC
 HOST-KEYWORD,chatgpt,AC
+DOMAIN-SUFFIX,oaistatic.com,AC
+DOMAIN-SUFFIX,oaiusercontent.com,AC
+DOMAIN,api.statsig.com,AC
+DOMAIN,api-iam.intercom.io,AC
+DOMAIN,chatgpt.livekit.cloud,AC
+DOMAIN,o33249.ingest.sentry.io,AC
+DOMAIN,openaiapi-site.azureedge.net,AC
+DOMAIN,sfo3.turn.livekit.cloud,AC
 ;shapr
 HOST-SUFFIX,shapr3d.com,AC
 HOST-KEYWORD,shapr3d,AC
