@@ -35,14 +35,14 @@ HOST-KEYWORD,discord,AC
 ;HOST-SUFFIX,openai.com,AC
 ;HOST-KEYWORD,openai,AC
 ;HOST-KEYWORD,chatgpt,AC
+HOST-KEYWORD,chatgpt,AC
+HOST-KEYWORD,openai,AC
 HOST,api-iam.intercom.io,AC
 HOST,browser-intake-datadoghq.com,AC
 HOST,o33249.ingest.sentry.io,AC
 HOST,openaiapi-site.azureedge.net,AC
 HOST,sfo3.turn.livekit.cloud,AC
 HOST,static.cloudflareinsights.com,AC
-HOST-KEYWORD,chatgpt,AC
-HOST-KEYWORD,openai,AC
 HOST-SUFFIX,ai.com,AC
 HOST-SUFFIX,algolia.net,AC
 HOST-SUFFIX,api.statsig.com,AC
