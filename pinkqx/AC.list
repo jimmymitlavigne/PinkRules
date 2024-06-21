@@ -78,3 +78,5 @@ HOST-KEYWORD,uphold,AC
 ;bank
 HOST-SUFFIX,monzo.com,AC
 HOST-KEYWORD,monzo,AC
+;shopify
+HOST-KEYWORD,shopify,AC
