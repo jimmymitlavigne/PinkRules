@@ -6,6 +6,8 @@
   "Image": "https://github.com/jimmymitlavigne/PinkRules/blob/master/icon/asn.png",
   "task": [
     "26 0 * * * https://raw.githubusercontent.com/wf021325/qx/master/task/csvw.js, tag=上汽大众, img-url=https://raw.githubusercontent.com/Xhy333/QuantumultX/main/icon/Sqdz.png, enabled=true",
+    "26 0 * * * https://gist.githubusercontent.com/Sliverkiss/1fb1cf9cd7486d30752b1ba29b871e37/raw/sfsy.js, tag=顺丰, img-url=https://raw.githubusercontent.com/Sliverkiss/QuantumultX/main/icon/sfsy.png, enabled=true
+",
     "26 0 * * * https://raw.githubusercontent.com/wf021325/qx/master/task/geely.js, tag= 吉利汽车, img-url=https://raw.githubusercontent.com/Xhy333/QuantumultX/main/icon/Jlqc.png, enabled=true"
   ] 
   }
