@@ -9,6 +9,6 @@
     "26 8 * * * https://raw.githubusercontent.com/leiyiyan/resource/main/script/ningji/ningji.js, tag=柠季, img-url=https://raw.githubusercontent.com/leiyiyan/resource/main/icons/ningji.png, enabled=true",
     "26 0 * * * https://gist.githubusercontent.com/Sliverkiss/1fb1cf9cd7486d30752b1ba29b871e37/raw/sfsy.js, tag=顺丰, img-url=https://raw.githubusercontent.com/Sliverkiss/QuantumultX/main/icon/sfsy.png, enabled=true",
     "26 0 * * * https://raw.githubusercontent.com/wf021325/qx/master/task/geely.js, tag= 吉利汽车, img-url=https://raw.githubusercontent.com/Xhy333/QuantumultX/main/icon/Jlqc.png, enabled=true",
-    "26 0 * * * https://raw.githubusercontent.com/wf021325/qx/master/task/zeekr.js, tag= 极氪汽车签到, img-url=https://github.com/jimmymitlavigne/PinkRules/blob/master/icon/asn.png, enabled=true"
+    "26 0 * * * https://raw.githubusercontent.com/wf021325/qx/master/task/zeekr.js, tag= 极氪汽车, img-url=https://github.com/jimmymitlavigne/PinkRules/blob/master/icon/asn.png, enabled=true"
   ] 
   }
