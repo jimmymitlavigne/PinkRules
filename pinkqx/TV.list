@@ -66,4 +66,6 @@ HOST-SUFFIX,xiaohongshu.com,TV
 HOST-SUFFIX,xhscdn.com,TV
 HOST-KEYWORD,xiaohongshu,TV
 HOST-KEYWORD,xhscdn,TV
+;team
+HOST-KEYWORD,teamview,TV
 
