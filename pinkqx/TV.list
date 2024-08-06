@@ -69,5 +69,6 @@ HOST-KEYWORD,xhscdn,TV
 ;team
 HOST-KEYWORD,teamview,TV
 HOST-KEYWORD,teamviewer,TV
-
+;gcp
+HOST-SUFFIX,cd.libai.me,TV
 
