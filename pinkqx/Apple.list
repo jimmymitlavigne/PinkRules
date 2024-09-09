@@ -1,9 +1,6 @@
-# > Apple
+# Apple相关的域名和服务
 USER-AGENT,*com.apple.mobileme.fmip1,Apple
 USER-AGENT,*WeatherFoundation*,Apple
-USER-AGENT,%E5%9C%B0%E5%9B%BE*,Apple
-USER-AGENT,%E6%9F%A5%E6%89%BE*,Apple
-USER-AGENT,%E8%AE%BE%E7%BD%AE*,Apple
 USER-AGENT,AppStore*,Apple
 USER-AGENT,com.apple.appstored*,Apple
 USER-AGENT,com.apple.geod*,Apple
@@ -15,6 +12,8 @@ USER-AGENT,fmflocatord*,Apple
 USER-AGENT,locationd*,Apple
 USER-AGENT,Maps*,Apple
 USER-AGENT,TestFlight*,Apple
+
+# Apple 相关域名
 HOST-SUFFIX,apple.co,Apple
 HOST-SUFFIX,apple.com,Apple
 HOST-SUFFIX,apple.com.cn,Apple
@@ -29,12 +28,18 @@ HOST-SUFFIX,itunes.com,Apple
 HOST-SUFFIX,me.com,Apple
 HOST-SUFFIX,mzstatic.com,Apple
 HOST,api.smoot.apple.cn,Apple
-# > Apple tv
+
+# Apple TV 相关域名
 HOST,hls-amt.itunes.apple.com,Apple
-HOST,hls.itunes.apple.com,Apple
-HOST,np-edge.itunes.apple.com,Apple
-HOST,play-edge.itunes.apple.com,Apple
-HOST,tv.applemusic.com,Apple
+HOST-SUFFIX,np-edge.itunes.apple.com,Apple
+HOST-SUFFIX,play-edge.itunes.apple.com,Apple
 HOST,uts-api.itunes.apple.com,Apple
 HOST-SUFFIX,tv.apple.com,Apple
 USER-AGENT,com.apple.tv*,Apple
+
+# Apple 更新相关域名
+HOST,ns.itunes.apple.com,Apple
+HOST,appldnld.apple.com,Apple
+HOST,mesu.apple.com,Apple
+HOST,xp.apple.com,Apple
+HOST,gdmf.apple.com,Apple
