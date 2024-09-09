@@ -43,3 +43,6 @@ HOST,appldnld.apple.com,Apple
 HOST,mesu.apple.com,Apple
 HOST,xp.apple.com,Apple
 HOST,gdmf.apple.com,Apple
+
+# Apple IP 段
+ip-cidr, 17.0.0.0/8,Apple
