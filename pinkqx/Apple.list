@@ -29,7 +29,7 @@ HOST-SUFFIX,itunes.com,Apple
 HOST-SUFFIX,me.com,Apple
 HOST-SUFFIX,mzstatic.com,Apple
 HOST,api.smoot.apple.cn,Apple
-;appletv
+# > Apple tv
 HOST,hls-amt.itunes.apple.com,Apple
 HOST,hls.itunes.apple.com,Apple
 HOST,np-edge.itunes.apple.com,Apple
