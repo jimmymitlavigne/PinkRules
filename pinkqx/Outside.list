@@ -93,7 +93,6 @@ HOST-SUFFIX,apigee.com,Outside
 HOST-SUFFIX,apk-dl.com,Outside
 HOST-SUFFIX,apkpure.com,Outside
 HOST-SUFFIX,appdownloader.net,Outside
-HOST-SUFFIX,apple-dns.net,Outside
 HOST-SUFFIX,app-measurement.com,Outside
 HOST-SUFFIX,appshopper.com,Outside
 HOST-SUFFIX,arcgis.com,Outside
@@ -638,7 +637,6 @@ HOST-SUFFIX,zoom.us,Outside
 HOST-SUFFIX,zynamics.com,Outside
 
 # > Force some domains which are fucked by GFW while resolving DNS,or do not respect the system Proxy
-HOST-KEYWORD,appledaily,Outside
 HOST-KEYWORD,beetalk,Outside
 HOST-KEYWORD,blogspot,Outside
 HOST-KEYWORD,dropbox,Outside
