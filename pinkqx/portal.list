@@ -1,6 +1,18 @@
-IP-CIDR,141.145.200.17/32,Portal
-IP-CIDR,158.178.136.222/32,Portal
-;HOST-KEYWORD,weixin,Portal
-;HOST-KEYWORD,qq.com,Portal
-HOST-SUFFIX,qq.com,Portal
-HOST-SUFFIX,weixin.qq.com,Portal
+# ==== 特定 IP 地址 ====
+IP-CIDR,141.145.200.17/32,Portal  # 指定IP 141.145.200.17
+IP-CIDR,158.178.136.222/32,Portal  # 指定IP 158.178.136.222
+
+# ==== 微信和 QQ 服务 ====
+HOST-SUFFIX,qq.com,Portal  # QQ和微信相关
+HOST-SUFFIX,weixin.qq.com,Portal  # 微信相关
+
+# ==== 淘宝和天猫服务 ====
+HOST-SUFFIX,taobao.com,Portal  # 淘宝主站
+HOST-SUFFIX,tmall.com,Portal  # 天猫主站
+HOST-SUFFIX,alicdn.com,Portal  # 淘宝/天猫内容分发
+HOST-SUFFIX,taobaocdn.com,Portal  # 淘宝内容分发
+HOST-SUFFIX,mmstat.com,Portal  # 淘宝统计数据
+
+# ==== 支付宝服务 ====
+HOST-SUFFIX,alipay.com,Portal  # 支付宝主站
+HOST-SUFFIX,alipayobjects.com,Portal  # 支付宝资源
