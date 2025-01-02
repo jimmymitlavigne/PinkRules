@@ -65,6 +65,7 @@ HOST-SUFFIX,alicdn.com,Portal
 HOST-SUFFIX,taobaocdn.com,Portal
 # 淘宝统计数据
 HOST-SUFFIX,mmstat.com,Portal
+HOST-KEYWORD,taobao,Portal
 
 # ==== 支付宝服务 ====
 # 支付宝主站
