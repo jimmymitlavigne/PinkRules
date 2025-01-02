@@ -5,10 +5,54 @@ IP-CIDR,141.145.200.17/32,Portal
 IP-CIDR,158.178.136.222/32,Portal
 
 # ==== 微信和 QQ 服务 ====
-# QQ和微信相关
-HOST-SUFFIX,qq.com,Portal
 # 微信相关
+HOST,btrace.qq.com,Portal
+HOST,dldir1.qq.com,Portal
+HOST,soup.v.qq.com,Portal
+HOST,vweixinf.tc.qq.com,Portal
+HOST,weixin110.qq.com,Portal
+HOST,wup.imtt.qq.com,Portal
+HOST,wxapp.tc.qq.com,Portal
+HOST-SUFFIX,qq.com,Portal
+HOST-SUFFIX,map.qq.com,Portal
+HOST-SUFFIX,up-hl.3g.qq.com,Portal
+HOST-SUFFIX,vweixinthumb.tc.qq.com,Portal
 HOST-SUFFIX,weixin.qq.com,Portal
+HOST-SUFFIX,wx.qq.com,Portal
+HOST-SUFFIX,wxapp.tc.qq.com,Portal
+HOST-SUFFIX,wxs.qq.com,Portal
+HOST-SUFFIX,yun-hl.3g.qq.com,Portal
+
+# WeChat相关
+HOST,apd-pcdnwxlogin.teg.tencent-cloud.net,Portal
+HOST,dl.wechat.com,Portal
+HOST,sgfindershort.wechat.com,Portal
+HOST,sgilinkshort.wechat.com,Portal
+HOST,sglong.wechat.com,Portal
+HOST,sgminorshort.wechat.com,Portal
+HOST,sgquic.wechat.com,Portal
+HOST,sgshort.wechat.com,Portal
+HOST,slife.xy-asia.com,Portal
+HOST,tencentmap.wechat.com,Portal
+HOST,wx.tenpay.com,Portal
+HOST-SUFFIX,iot-tencent.com,Portal
+HOST-SUFFIX,lbs.gtimg.com,Portal
+HOST-SUFFIX,qlogo.cn,Portal
+HOST-SUFFIX,qpic.cn,Portal
+HOST-SUFFIX,servicewechat.com,Portal
+HOST-SUFFIX,tenpay.com,Portal
+HOST-SUFFIX,wechat.com,Portal
+HOST-SUFFIX,wechatlegal.net,Portal
+HOST-SUFFIX,wechatos.net,Portal
+HOST-SUFFIX,wechatpay.com,Portal
+HOST-SUFFIX,weixin.com,Portal
+HOST-SUFFIX,weixinbridge.com,Portal
+HOST-SUFFIX,weixinsxy.com,Portal
+HOST-SUFFIX,wx.gtimg.com,Portal
+
+USER-AGENT,MicroMessenger*,Portal
+USER-AGENT,WeChat*,Portal
+IP-ASN,132203,Portal
 
 # ==== 淘宝和天猫服务 ====
 # 淘宝主站
