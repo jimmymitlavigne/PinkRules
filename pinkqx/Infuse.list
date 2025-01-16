@@ -11,3 +11,6 @@ HOST-SUFFIX,misakaf.org,Infuse
 HOST-SUFFIX,push-kr.misakaf.org,Infuse
 HOST-KEYWORD,misakaf,Infuse
 IP-CIDR,102.223.180.108/24,Infuse
+
+# > fac
+HOST-SUFFIX,makima.online,Infuse
