@@ -13,4 +13,4 @@ HOST-KEYWORD,misakaf,Infuse
 IP-CIDR,102.223.180.108/24,Infuse
 
 # > fac
-HOST-SUFFIX,makima.online,Infuse
+;HOST-SUFFIX,makima.online,Infuse
