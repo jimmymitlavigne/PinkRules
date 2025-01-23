@@ -1,0 +1,87 @@
+#参考来源：https://github.com/blackmatrix7/ios_rule_script/blob/master/rule/QuantumultX/BiliBili/BiliBili.list
+#参考来源：https://github.com/sve1r/Rules-For-Quantumult-X/blob/main/Rules/Media/Domestic/BiliBili.list
+
+# >> USER-AGENT
+USER-AGENT,*bili*,BiliBili
+USER-AGENT,bili*,BiliBili
+USER-AGENT,Bilibili*,BiliBili
+USER-AGENT,bili-inter*,BiliBili
+
+# >> 主站
+HOST-SUFFIX,bilibili.cc,BiliBili
+HOST-SUFFIX,bilibili.cn,BiliBili
+HOST-SUFFIX,bilibili.co,BiliBili
+HOST-SUFFIX,bilibili.com,BiliBili
+HOST-SUFFIX,bilibili.net,BiliBili
+HOST-SUFFIX,bilibili.tv,BiliBili
+HOST-SUFFIX,biliapi.com,BiliBili
+HOST-SUFFIX,biliapi.net,BiliBili
+HOST-SUFFIX,biliintl.com,BiliBili
+# 补充：第一份规则中独有，但仍可能需要
+HOST-SUFFIX,biliintl.co,BiliBili
+
+# >> 附属域名
+HOST-SUFFIX,acg.tv,BiliBili
+HOST-SUFFIX,acgvideo.com,BiliBili
+HOST-SUFFIX,animetamashi.cn,BiliBili
+HOST-SUFFIX,animetamashi.com,BiliBili
+HOST-SUFFIX,anitama.cn,BiliBili
+HOST-SUFFIX,anitama.net,BiliBili
+HOST-SUFFIX,b23.tv,BiliBili
+HOST-SUFFIX,baka.im,BiliBili
+HOST-SUFFIX,bigfun.cn,BiliBili
+HOST-SUFFIX,bigfunapp.cn,BiliBili
+HOST-SUFFIX,bili22.cn,BiliBili
+HOST-SUFFIX,bili2233.cn,BiliBili
+HOST-SUFFIX,bili23.cn,BiliBili
+HOST-SUFFIX,bili33.cn,BiliBili
+
+# >> 资源分发
+HOST-SUFFIX,bilicdn1.com,BiliBili
+HOST-SUFFIX,bilicdn2.com,BiliBili
+HOST-SUFFIX,bilicdn3.com,BiliBili
+HOST-SUFFIX,bilicdn4.com,BiliBili
+HOST-SUFFIX,bilicdn5.com,BiliBili
+HOST-SUFFIX,biliimg.com,BiliBili
+HOST-SUFFIX,hdslb.com,BiliBili
+HOST-SUFFIX,hdslb.com.w.kunlunhuf.com,BiliBili
+HOST-SUFFIX,hdslb.com.w.kunlunpi.com,BiliBili
+HOST-SUFFIX,hdslb.net,BiliBili
+HOST-SUFFIX,hdslb.org,BiliBili
+HOST-SUFFIX,maoercdn.com,BiliBili
+HOST-SUFFIX,mcbbs.net,BiliBili
+HOST-SUFFIX,mincdn.com,BiliBili
+HOST-SUFFIX,smtcdns.net,BiliBili
+HOST-SUFFIX,p-bstarstatic.akamaized.net,BiliBili
+HOST-SUFFIX,p.bstarstatic.com,BiliBili
+HOST-SUFFIX,upos-bstar-mirrorakam.akamaized.net,BiliBili
+HOST-SUFFIX,upos-bstar1-mirrorakam.akamaized.net,BiliBili
+HOST-SUFFIX,upos-hz-mirrorakam.akamaized.net,BiliBili
+# 补充：第一份规则中独有，但仍可能需要
+HOST-SUFFIX,bilivideo.cn,BiliBili
+HOST-SUFFIX,bilivideo.com,BiliBili
+HOST-SUFFIX,bilivideo.net,BiliBili
+HOST-SUFFIX,uposdash-302-bilivideo.yfcdn.net,BiliBili
+
+# >> 游戏
+HOST-SUFFIX,biligame.com,BiliBili
+HOST-SUFFIX,biligame.net,BiliBili
+HOST-SUFFIX,biligame.cn,BiliBili
+HOST-SUFFIX,biligame.co,BiliBili
+HOST-SUFFIX,bilibiligame.cn,BiliBili
+HOST-SUFFIX,bilibiligame.co,BiliBili
+HOST-SUFFIX,bilibiligame.net,BiliBili
+HOST-SUFFIX,biligo.com,BiliBili
+
+# >> 其他
+HOST-SUFFIX,bilicomics.com,BiliBili
+HOST-SUFFIX,bilibilipay.cn,BiliBili
+HOST-SUFFIX,bilibilipay.com,BiliBili
+HOST-SUFFIX,corari.com,BiliBili
+HOST-SUFFIX,dreamcast.hk,BiliBili
+HOST-SUFFIX,dyhgames.com,BiliBili
+HOST-SUFFIX,im9.com,BiliBili
+HOST-SUFFIX,sharejoytech.com,BiliBili
+HOST-SUFFIX,yo9.com,BiliBili
+# 补充：第一份规则中独有，但仍可能需要
+HOST-SUFFIX,biliplus.com,BiliBili
