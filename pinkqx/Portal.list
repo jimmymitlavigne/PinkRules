@@ -77,6 +77,7 @@ HOST-SUFFIX,alipayobjects.com,Portal
 # ==== 直连fac emby ====
 HOST-SUFFIX,cdn.jiashule.com,Portal
 HOST-SUFFIX,makima.online,Portal
+HOST-SUFFIX,omni.313445.xyz,Portal
 
 # ==== ASN服务 ====
 IP-ASN,10111,Portal
