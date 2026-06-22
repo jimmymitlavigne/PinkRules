@@ -23,6 +23,10 @@ HOST-SUFFIX,wxapp.tc.qq.com,Portal
 HOST-SUFFIX,wxs.qq.com,Portal
 HOST-SUFFIX,yun-hl.3g.qq.com,Portal
 
+# rustdesk相关
+HOST-SUFFIX,rdt.slum.me,Portal
+HOST-SUFFIX,rd.slum.me,Portal
+
 # WeChat相关
 HOST,apd-pcdnwxlogin.teg.tencent-cloud.net,Portal
 HOST,dl.wechat.com,Portal
