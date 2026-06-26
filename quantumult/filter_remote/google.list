@@ -1,0 +1,18 @@
+# > Google
+USER-AGENT,%E4%BA%91%E7%AB%AF%E7%A1%AC%E7%9B%98*,Google
+USER-AGENT,Google.Drive*,Google
+USER-AGENT,*com.google.Drive*,Google
+HOST-SUFFIX,cloud.cupronickel.goog,Google
+HOST-SUFFIX,googleapis.com,Google
+HOST-SUFFIX,docs.google.com,Google
+HOST-SUFFIX,drive.google.com,Google
+HOST-SUFFIX,googledrive.com,Google
+HOST-SUFFIX,googleusercontent.com,Google
+HOST-SUFFIX,imap.gmail.com,Google
+HOST-SUFFIX,smtp.gmail.com,Google
+HOST-SUFFIX,gmail.com,Google
+HOST-KEYWORD,www.google.,Google
+HOST-KEYWORD,google,Google
+;HOST-KEYWORD,gmail,Google
+;HOST-SUFFIX,prod.brass.cloud.cupronickel.goog,Google
+;HOST-SUFFIX,prod.zinc.cloud.cupronickel.goog,Google
