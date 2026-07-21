@@ -85,3 +85,5 @@ HOST-KEYWORD,shopify,AC
 HOST-KEYWORD,duolingo,AC
 ;larksuite
 HOST-KEYWORD,larksuite,AC
+;push
+HOST-SUFFIX,push.apple.com,AC
