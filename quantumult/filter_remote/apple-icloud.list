@@ -1,0 +1,17 @@
+# NAME: Apple iCloud
+# PURPOSE: Apple TV 所需 iCloud 功能域名
+# SOURCE: https://support.apple.com/101555
+# POLICY: iCloud
+# TOTAL: 11
+
+HOST-SUFFIX,apple-cloudkit.com,iCloud
+HOST-SUFFIX,apple-livephotoskit.com,iCloud
+HOST-SUFFIX,apzones.com,iCloud
+HOST-SUFFIX,cdn-apple.com,iCloud
+HOST-SUFFIX,gc.apple.com,iCloud
+HOST-SUFFIX,icloud.com,iCloud
+HOST-SUFFIX,icloud.com.cn,iCloud
+HOST-SUFFIX,icloud.apple.com,iCloud
+HOST-SUFFIX,icloud-content.com,iCloud
+HOST-SUFFIX,iwork.apple.com,iCloud
+HOST-SUFFIX,apple-dns.net,iCloud

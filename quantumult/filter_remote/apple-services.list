@@ -1,0 +1,55 @@
+# NAME: Other Apple Services
+# PURPOSE: Apple TV 的系统、账户、更新、App Store、推送和证书服务
+# SOURCE: https://support.apple.com/101555
+# POLICY: Apple Services
+# TOTAL: 38
+
+# 设备激活、联网检测与时间同步
+HOST,albert.apple.com,Apple Services
+HOST,captive.apple.com,Apple Services
+HOST,gs.apple.com,Apple Services
+HOST,humb.apple.com,Apple Services
+HOST,static.ips.apple.com,Apple Services
+HOST,tbsc.apple.com,Apple Services
+HOST,time-ios.apple.com,Apple Services
+HOST,time.apple.com,Apple Services
+
+# 推送与 Apple Account
+HOST-SUFFIX,push.apple.com,Apple Services
+HOST,account.apple.com,Apple Services
+HOST,appleid.cdn-apple.com,Apple Services
+HOST,idmsa.apple.com,Apple Services
+HOST,gsa.apple.com,Apple Services
+
+# tvOS 软件更新
+HOST,gdmf.apple.com,Apple Services
+HOST,gg.apple.com,Apple Services
+HOST,mesu.apple.com,Apple Services
+HOST,updates-http.cdn-apple.com,Apple Services
+HOST,updates.cdn-apple.com,Apple Services
+HOST,xp.apple.com,Apple Services
+
+# App Store、应用内容和屏幕保护程序
+HOST-SUFFIX,apps.apple.com,Apple Services
+HOST-SUFFIX,itunes.apple.com,Apple Services
+HOST-SUFFIX,mzstatic.com,Apple Services
+HOST,ppq.apple.com,Apple Services
+HOST-SUFFIX,appattest.apple.com,Apple Services
+HOST,sylvan.apple.com,Apple Services
+
+# 内容缓存、诊断与加密 DNS
+HOST,lcdn-locator.apple.com,Apple Services
+HOST,serverstatus.apple.com,Apple Services
+HOST,diagassets.apple.com,Apple Services
+HOST,doh.dns.apple.com,Apple Services
+
+# 证书验证
+HOST,certs.apple.com,Apple Services
+HOST,crl.apple.com,Apple Services
+HOST,crl3.digicert.com,Apple Services
+HOST,crl4.digicert.com,Apple Services
+HOST,ocsp.apple.com,Apple Services
+HOST,ocsp.digicert.cn,Apple Services
+HOST,ocsp.digicert.com,Apple Services
+HOST,ocsp2.apple.com,Apple Services
+HOST,valid.apple.com,Apple Services
