@@ -1,0 +1,228 @@
+# NAME: Mainland Lite
+# PURPOSE: Apple TV 中国大陆常用流媒体、OTT、社交媒体与必要 CDN 精简直连规则
+# BASED-ON: blackmatrix7 China / ChinaMedia（人工筛选）
+# POLICY: Mainland
+# NOTE: 建议继续配合主配置中的 geoip, cn, direct 使用
+# TOTAL: 177
+
+# CCTV / 国家级电视平台
+HOST-SUFFIX,cctv.cn,Mainland
+HOST-SUFFIX,cctv.com,Mainland
+HOST-SUFFIX,cctvlib.cn,Mainland
+HOST-SUFFIX,cctvlib.com.cn,Mainland
+HOST-SUFFIX,cctvpic.com,Mainland
+HOST-SUFFIX,cctvpro.cn,Mainland
+HOST-SUFFIX,cctvpro.com.cn,Mainland
+HOST-SUFFIX,cntv.cn,Mainland
+HOST-SUFFIX,cntv.com.cn,Mainland
+HOST-SUFFIX,cntvwb.cn,Mainland
+HOST-SUFFIX,ipanda.cn,Mainland
+HOST-SUFFIX,ipanda.com,Mainland
+HOST-SUFFIX,livechina.cn,Mainland
+HOST-SUFFIX,livechina.com,Mainland
+HOST-SUFFIX,chinaepg.cn,Mainland
+HOST-SUFFIX,citv.net.cn,Mainland
+HOST-SUFFIX,cnms.net.cn,Mainland
+HOST-SUFFIX,cnmstl.net,Mainland
+HOST-SUFFIX,tvcc.cn,Mainland
+HOST-SUFFIX,tvcc.com.cn,Mainland
+
+# 哔哩哔哩
+HOST-SUFFIX,b23.tv,Mainland
+HOST-SUFFIX,biliapi.com,Mainland
+HOST-SUFFIX,biliapi.net,Mainland
+HOST-SUFFIX,bilibili.cn,Mainland
+HOST-SUFFIX,bilibili.com,Mainland
+HOST-SUFFIX,biliimg.com,Mainland
+HOST-SUFFIX,bilivideo.cn,Mainland
+HOST-SUFFIX,bilivideo.com,Mainland
+HOST-SUFFIX,bilivideo.net,Mainland
+HOST-SUFFIX,hdslb.com,Mainland
+HOST-SUFFIX,hdslb.net,Mainland
+
+# 爱奇艺 / 银河奇异果
+HOST-SUFFIX,iqiyi.com,Mainland
+HOST-SUFFIX,iqiyiedge.com,Mainland
+HOST-SUFFIX,iqiyiedge.net,Mainland
+HOST-SUFFIX,iqiyipic.com,Mainland
+HOST-SUFFIX,aiqiyicloud.com,Mainland
+HOST-SUFFIX,aiqiyicloud.net,Mainland
+HOST-SUFFIX,qiyi.cn,Mainland
+HOST-SUFFIX,qiyi.com,Mainland
+HOST-SUFFIX,qiyipic.com,Mainland
+HOST-SUFFIX,qy.com,Mainland
+HOST-SUFFIX,qy.net,Mainland
+HOST-SUFFIX,pps.tv,Mainland
+HOST-SUFFIX,ppsimg.com,Mainland
+HOST-SUFFIX,gitv.tv,Mainland
+
+# 优酷 / 酷喵
+HOST-SUFFIX,youku.com,Mainland
+HOST-SUFFIX,youku.com.cn,Mainland
+HOST-SUFFIX,ykimg.com,Mainland
+HOST-SUFFIX,soku.com,Mainland
+HOST-SUFFIX,tudou.com,Mainland
+HOST-SUFFIX,kumiao.com,Mainland
+HOST-SUFFIX,kumiao.tv,Mainland
+HOST-SUFFIX,cibntv.net,Mainland
+
+# 芒果 TV
+HOST-SUFFIX,mgtv.com,Mainland
+HOST-SUFFIX,hunantv.com,Mainland
+HOST-SUFFIX,hitv.com,Mainland
+HOST-SUFFIX,imgo.tv,Mainland
+HOST-SUFFIX,hunaniptv.com,Mainland
+
+# 腾讯视频及腾讯基础服务
+HOST-SUFFIX,qq.com,Mainland
+HOST-SUFFIX,gtimg.com,Mainland
+HOST-SUFFIX,qpic.cn,Mainland
+HOST-SUFFIX,qlogo.cn,Mainland
+HOST-SUFFIX,tencent.com,Mainland
+HOST-SUFFIX,qcloud.com,Mainland
+HOST-SUFFIX,myqcloud.com,Mainland
+HOST-SUFFIX,tencent-cloud.net,Mainland
+HOST-SUFFIX,smtcdns.com,Mainland
+HOST-SUFFIX,smtcdns.net,Mainland
+
+# 抖音 / 西瓜视频 / 字节跳动
+HOST-SUFFIX,douyin.com,Mainland
+HOST-SUFFIX,douyinvod.com,Mainland
+HOST-SUFFIX,byteimg.com,Mainland
+HOST-SUFFIX,bytecdn.cn,Mainland
+HOST-SUFFIX,bytedance.com,Mainland
+HOST-SUFFIX,bytedance.net,Mainland
+HOST-SUFFIX,ixigua.com,Mainland
+HOST-SUFFIX,toutiao.com,Mainland
+HOST-SUFFIX,pstatp.com,Mainland
+HOST-SUFFIX,snssdk.com,Mainland
+HOST-SUFFIX,amemv.com,Mainland
+
+# 快手
+HOST-SUFFIX,kuaishou.com,Mainland
+HOST-SUFFIX,gifshow.com,Mainland
+HOST-SUFFIX,ksapisrv.com,Mainland
+HOST-SUFFIX,kspkg.com,Mainland
+HOST-SUFFIX,kwaicdn.com,Mainland
+
+# 虎牙 / 斗鱼
+HOST-SUFFIX,huya.com,Mainland
+HOST-SUFFIX,msstatic.com,Mainland
+HOST-SUFFIX,douyu.com,Mainland
+HOST-SUFFIX,douyu.tv,Mainland
+HOST-SUFFIX,douyucdn.cn,Mainland
+HOST-SUFFIX,douyuscdn.com,Mainland
+HOST-SUFFIX,douyutv.com,Mainland
+HOST-SUFFIX,douyutv.com.cn,Mainland
+
+# 咪咕及三大运营商
+HOST-SUFFIX,migu.cn,Mainland
+HOST-SUFFIX,miguvideo.com,Mainland
+HOST-SUFFIX,cmvideo.cn,Mainland
+HOST-SUFFIX,10086.cn,Mainland
+HOST-SUFFIX,chinamobile.com,Mainland
+HOST-SUFFIX,10010.com,Mainland
+HOST-SUFFIX,chinaunicom.cn,Mainland
+HOST-SUFFIX,189.cn,Mainland
+HOST-SUFFIX,chinatelecom.com.cn,Mainland
+
+# 其他大陆 OTT / 视频平台
+HOST-SUFFIX,icntv.tv,Mainland
+HOST-SUFFIX,bestv.com.cn,Mainland
+HOST-SUFFIX,wasu.cn,Mainland
+HOST-SUFFIX,wasu.com,Mainland
+HOST-SUFFIX,le.com,Mainland
+HOST-SUFFIX,letv.com,Mainland
+HOST-SUFFIX,lecloud.com,Mainland
+HOST-SUFFIX,letvcloud.com,Mainland
+HOST-SUFFIX,pptv.com,Mainland
+HOST-SUFFIX,pplive.cn,Mainland
+HOST-SUFFIX,pplive.com,Mainland
+HOST-SUFFIX,ppstream.com,Mainland
+HOST-SUFFIX,fun.tv,Mainland
+HOST-SUFFIX,56.com,Mainland
+HOST-SUFFIX,acfun.cn,Mainland
+HOST-SUFFIX,acfun.com,Mainland
+HOST-SUFFIX,acfun.tv,Mainland
+HOST-SUFFIX,sohu.com,Mainland
+HOST-SUFFIX,sohu.com.cn,Mainland
+
+# 视频平台常用云服务
+HOST-SUFFIX,alicdn.com,Mainland
+HOST-SUFFIX,aliyun.com,Mainland
+HOST-SUFFIX,aliyuncs.com,Mainland
+HOST-SUFFIX,bcebos.com,Mainland
+HOST-SUFFIX,baidubce.com,Mainland
+
+# 网易
+HOST-SUFFIX,163.com,Mainland
+HOST-SUFFIX,126.net,Mainland
+HOST-SUFFIX,netease.com,Mainland
+
+# 中国社交媒体 / 即时通讯
+# 微信（QQ、GTIMG、QPic、QLogo 已由腾讯视频分组覆盖）
+HOST-SUFFIX,servicewechat.com,Mainland
+HOST-SUFFIX,tenpay.com,Mainland
+HOST-SUFFIX,wechat.com,Mainland
+HOST-SUFFIX,wechatlegal.net,Mainland
+HOST-SUFFIX,wechatos.net,Mainland
+HOST-SUFFIX,wechatpay.com,Mainland
+HOST-SUFFIX,weixin.com,Mainland
+HOST-SUFFIX,weixinbridge.com,Mainland
+HOST-SUFFIX,weixinsxy.com,Mainland
+
+# 微博
+HOST-SUFFIX,weibo.cn,Mainland
+HOST-SUFFIX,weibo.com,Mainland
+HOST-SUFFIX,weibocdn.com,Mainland
+HOST-SUFFIX,sina.com.cn,Mainland
+HOST-SUFFIX,sinaimg.cn,Mainland
+HOST-SUFFIX,sinaimg.com,Mainland
+
+# 小红书
+HOST-SUFFIX,xiaohongshu.com,Mainland
+HOST-SUFFIX,xhscdn.com,Mainland
+HOST-SUFFIX,xhscdn.net,Mainland
+
+# 知乎
+HOST-SUFFIX,zhihu.com,Mainland
+HOST-SUFFIX,zhimg.com,Mainland
+
+# 豆瓣
+HOST-SUFFIX,douban.com,Mainland
+HOST-SUFFIX,doubanio.com,Mainland
+
+# 百度贴吧
+HOST,tieba.baidu.com,Mainland
+HOST-SUFFIX,tieba.com,Mainland
+HOST-SUFFIX,tiebaimg.com,Mainland
+
+# 钉钉 / 飞书
+HOST-SUFFIX,dingding.xin,Mainland
+HOST-SUFFIX,dingtalk.com,Mainland
+HOST-SUFFIX,dingtalk.net,Mainland
+HOST-SUFFIX,dingtalkapps.com,Mainland
+HOST-SUFFIX,feishu.cn,Mainland
+HOST-SUFFIX,feishu.net,Mainland
+HOST-SUFFIX,feishucdn.com,Mainland
+HOST-SUFFIX,feishupkg.com,Mainland
+
+# LOFTER
+HOST-SUFFIX,lofter.com,Mainland
+
+# 大陆 CDN / 云分发
+HOST-SUFFIX,chinacache.net,Mainland
+HOST-SUFFIX,qiniucdn.com,Mainland
+HOST-SUFFIX,qiniudn.com,Mainland
+HOST-SUFFIX,qbox.me,Mainland
+HOST-SUFFIX,clouddn.com,Mainland
+HOST-SUFFIX,upaiyun.com,Mainland
+HOST-SUFFIX,upyun.com,Mainland
+HOST-SUFFIX,ksyun.com,Mainland
+HOST-SUFFIX,ksyungslb.com,Mainland
+HOST-SUFFIX,ccgslb.com,Mainland
+HOST-SUFFIX,ccgslb.net,Mainland
+HOST-SUFFIX,wangsu.com,Mainland
+HOST-SUFFIX,cdn20.com,Mainland
+HOST-SUFFIX,ourdvs.com,Mainland
+HOST-SUFFIX,ourdvsss.com,Mainland
