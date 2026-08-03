@@ -1,9 +1,4 @@
-# NAME: Apple TV Streaming
-# PURPOSE: Apple TV+ / Apple Originals 流媒体域名
-# UPSTREAM: blackmatrix7/ios_rule_script + Apple TV+ observed endpoints
-# SOURCE: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/QuantumultX/AppleTV/AppleTV.list
-# POLICY: Apple TV
-# TOTAL: 7
+
 
 # HLS / SVOD 播放与清单
 HOST,hls-svod.itunes.apple.com,Apple TV
