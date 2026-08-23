@@ -1,4 +1,19 @@
 # remove paypal microsoft pornhub 20210129
+# > Game
+HOST-SUFFIX,fanatical.com,Outside
+HOST-SUFFIX,humblebundle.com,Outside
+HOST-KEYWORD,steam,Outside
+HOST-SUFFIX,pvp.net,Outside
+HOST-SUFFIX,riotgames.com,Outside
+HOST-SUFFIX,riotcdn.net,Outside
+USER-AGENT,hearthstone*,Outside
+HOST,cdp.cloud.unity3d.com,Outside
+HOST-SUFFIX,battle.net,Outside
+HOST-SUFFIX,battlenet.com,Outside
+HOST-SUFFIX,blizzard.com,Outside
+HOST-SUFFIX,clashroyaleapp.com,Outside
+USER-AGENT,battleroyale*,Outside
+
 # > UA
 USER-AGENT,%E7%BA%BD%E7%BA%A6%E6%97%B6%E6%8A%A5*,Outside
 USER-AGENT,AwemeI18n*,Outside

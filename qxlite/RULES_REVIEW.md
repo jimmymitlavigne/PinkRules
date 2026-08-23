@@ -29,9 +29,9 @@ Apple 已拆成两个明确策略，`Apple Direct` 排在 `Apple Services` 前�
 - `AC` 按用户定义保留为“学术 + 国际金融 + AI”，文件内按三类分段。
 - AC 已移除 Datadog、Cloudflare Insights、Statsig、Feature Gates、LaunchDarkly 等共享统计、遥测和功能开关域名，只保留 OpenAI 自有域名及人机验证、实时语音功能依赖。
 - `TV` 仅保留影视、成人内容、番剧索引、字幕和电视服务。
-- 新增 `Game`，承接原来混在 TV/Mainland 的 Steam、Riot、Blizzard 等规则。
-- `Social` 替代含义不准确的 `Work`，仅保留豆瓣、微博、头条、知乎、抖音、小红书和 Soul。
-- `Custom Direct` 替代混装的 `Portal`，只保留明确要求直连的自有服务、远程控制和服务器。
+- Steam、Riot、Blizzard 等游戏规则并入 `Outside`，不再保留独立 Game 策略。
+- `Work` 负责豆瓣、微博、头条、知乎、抖音、小红书和 Soul，默认直连并可切换通用代理或地区策略。
+- `Customer` 只保留明确要求直连的自有服务、远程控制和服务器。
 - Prime Video、ESPN 从 Hulu 拆出独立规则；Hulu 文件只包含 Hulu。
 - PikPak 从 Microsoft 移到 Storage；Microsoft 文件只保留 Microsoft 服务。
 - Storage 的宽泛 `dl-a` 关键词已替换为 Microsoft 官方列出的 OneDrive 内容域名：`files.1drv.com`、`storage.live.com`、`livefilestore.com` 和 `storage.msn.com`。
@@ -45,7 +45,7 @@ Apple 已拆成两个明确策略，`Apple Direct` 排在 `Apple Services` 前�
 
 ## 分流顺序
 
-1. 自定义与专用场景：TV、Social、Custom Direct、Infuse、Storage、Mail、Apple News、News、AC、Game。
+1. 自定义与专用场景：TV、Work、Customer、Infuse、Storage、Mail、Apple News、News、AC。
 2. 区域与测速：Turkey、Speedtest。
 3. 流媒体：Netflix、Hulu、Prime Video、ESPN、Disney+、Paramount+、HBO、Spotify、YouTube、Pornhub。
 4. 应用与厂商：Telegram、TikTok、Notion、Adobe、Apple Direct、Apple Services、Microsoft、PayPal、Google。
@@ -60,6 +60,6 @@ News 和 Outside 均放在 China 前，用于优先处理 `bloomberg.cn` 等明�
 
 已移除 `AdBlock` 策略组、广告/劫持分流订阅、小红书和 YouTube 去广告复写，以及可能重新引入去广告脚本的旧合集。迅雷版权规避的三条本地 `reject` 不是广告规则，因此保留。
 
-当前共有 34 个分流文件、1,249 条活动规则。校验项目包括：配置引用与本地文件一一对应、策略名称一致、规则字段完整、文件内无重复、没有被前置规则完整覆盖而永远无法命中的后置规则，以及没有同策略的非必要包含规则。当前保留的 56 组跨策略包含关系均用于“专用策略优先、宽泛规则兜底”。
+当前共有 33 个分流文件、1,249 条活动规则。校验项目包括：配置引用与本地文件一一对应、策略名称一致、规则字段完整、文件内无重复、没有被前置规则完整覆盖而永远无法命中的后置规则，以及没有同策略的非必要包含规则。当前保留的 56 组跨策略包含关系均用于“专用策略优先、宽泛规则兜底”。
 
 Netflix 官方移动交付域名参考：<https://openconnect.netflix.com/mobiledeliverydomains.txt>。Netflix 官方说明其网页使用 AWS、视频内容由 Open Connect 提供；网段按 RIPEstat 当前公布的 AS2906 路由聚合，快照日期为 2026-08-23。

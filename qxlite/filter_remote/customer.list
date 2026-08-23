@@ -1,0 +1,8 @@
+# Customer：明确要求直连的自有服务、远程控制与服务器
+IP-CIDR,141.145.200.17/32,Customer
+IP-CIDR,158.178.136.222/32,Customer
+HOST-SUFFIX,rdt.slum.me,Customer
+HOST-SUFFIX,rd.slum.me,Customer
+HOST-SUFFIX,cdn.jiashule.com,Customer
+HOST-SUFFIX,makima.online,Customer
+HOST-SUFFIX,omni.313445.xyz,Customer
