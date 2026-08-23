@@ -10,9 +10,9 @@
 - 原始规则快照：`rules_snapshot/`
 - 只读校验脚本：`tools/validate_qx_rules.py`
 
-当前配置仍引用 GitHub 上的 `PinkRules/master/quantumult/filter_remote/` 地址。本地规则只有在确认并同步到线上同路径后才会生效；目前没有提交或上传任何文件。
+当前配置已引用 GitHub 上的 `PinkRules/master/qxlite/filter_remote/` 地址，整理后的规则已同步到仓库 `qxlite/` 目录。
 
-> 安全提醒：完整配置含节点订阅凭据、代理密码和 MITM 证书材料，不应直接上传到公开仓库。确认同步时，默认只同步 `quantumult/filter_remote/`；若也要提交配置，必须先脱敏或确认目标仓库为可信私有仓库。
+> 安全提醒：完整配置含节点订阅凭据、代理密码和 MITM 证书材料，不应直接上传到公开仓库。本次仅同步脱敏后的 `qxlite/` 规则包，未上传完整配置。
 
 ## Apple 分流
 
