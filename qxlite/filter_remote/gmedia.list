@@ -1,0 +1,93 @@
+# > ABC
+HOST-SUFFIX,edgedatg.com,GMedia
+HOST-SUFFIX,abc.com,GMedia
+
+# > Abema TV
+USER-AGENT,AbemaTV*,GMedia
+HOST-SUFFIX,abema.io,GMedia
+HOST-SUFFIX,abema.tv,GMedia
+HOST-SUFFIX,ameba.jp,GMedia
+HOST-SUFFIX,hayabusa.io,GMedia
+
+# > Bahamut
+USER-AGENT,Anime*,GMedia
+HOST-SUFFIX,bahamut.com.tw,GMedia
+HOST-SUFFIX,gamer.com.tw,GMedia
+
+# > BBC iPlayer
+USER-AGENT,BBCiPlayer*,GMedia
+HOST-KEYWORD,bbcfmt,GMedia
+HOST-SUFFIX,bbci.co,GMedia
+HOST-SUFFIX,bbci.co.uk,GMedia
+
+# > DAZN
+HOST-SUFFIX,d151l6v8er5bdm.cloudfront.net,GMedia
+HOST-SUFFIX,dazn.com,GMedia
+HOST-SUFFIX,dazn-api.com,GMedia
+HOST-SUFFIX,dazndn.com,GMedia
+HOST-SUFFIX,indazn.com,GMedia
+
+# > encoreTVB
+USER-AGENT,encoreTVB*,GMedia
+HOST-SUFFIX,encoretvb.com,GMedia
+HOST,content.jwplatform.com,GMedia
+HOST,videos-f.jwpsrv.com,GMedia
+
+# > Fox Now
+USER-AGENT,FOX%20NOW*,GMedia
+HOST-SUFFIX,foxdcg.com,GMedia
+HOST-SUFFIX,uplynk.com,GMedia
+
+# > Fox+ (HK|TW|SG)
+USER-AGENT,FOXPlus*,GMedia
+HOST-SUFFIX,foxplus.com,GMedia
+HOST-SUFFIX,theplatform.com,GMedia
+
+# > Japonx
+HOST-KEYWORD,japonx,GMedia
+HOST-KEYWORD,japronx,GMedia
+
+# > JOOX
+USER-AGENT,WeMusic*,GMedia
+USER-AGENT,JOOX*,GMedia
+HOST-SUFFIX,joox.com,GMedia
+
+# > KKBOX
+HOST-SUFFIX,kkbox.com,GMedia
+HOST-SUFFIX,kkbox.com.tw,GMedia
+HOST-SUFFIX,kfs.io,GMedia
+
+# > KKTV
+USER-AGENT,KKTV*,GMedia
+USER-AGENT,com.kktv*,GMedia
+HOST-SUFFIX,kktv.me,GMedia
+HOST-SUFFIX,kktv.com.tw,GMedia
+HOST,kktv-theater.kk.stream,GMedia
+
+# > Line TV
+HOST-SUFFIX,d3c7rimkq79yfu.cloudfront.net,GMedia
+HOST-SUFFIX,linetv.tw,GMedia
+
+# > myTV_SUPER
+USER-AGENT,mytv*,GMedia
+HOST-SUFFIX,mytvsuper.com,GMedia
+HOST-SUFFIX,tvb.com,GMedia
+
+# > Pandora
+HOST-SUFFIX,pandora.com,GMedia
+
+# > PBS
+USER-AGENT,PBS*,GMedia
+HOST-SUFFIX,pbs.org,GMedia
+
+# > SoundCloud
+USER-AGENT,SoundCloud*,GMedia
+HOST-SUFFIX,sndcdn.com,GMedia
+HOST-SUFFIX,soundcloud.com,GMedia
+
+# > ViuTV
+USER-AGENT,ViuTV*,GMedia
+HOST-SUFFIX,nowe.com,GMedia
+HOST-SUFFIX,viu.com,GMedia
+HOST-SUFFIX,viu.tv,GMedia
+HOST-SUFFIX,viu.now.com,GMedia

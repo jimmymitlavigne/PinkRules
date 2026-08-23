@@ -1,0 +1,37 @@
+# Apple 大流量直连：音乐、视频、应用下载与系统更新
+USER-AGENT,AppStore*,Apple Direct
+USER-AGENT,com.apple.appstored*,Apple Direct
+USER-AGENT,TestFlight*,Apple Direct
+USER-AGENT,com.apple.tv*,Apple Direct
+
+# App Store、Apple Music 与 Apple TV
+HOST-SUFFIX,apps.apple.com,Apple Direct
+HOST-SUFFIX,appstore.com,Apple Direct
+HOST-SUFFIX,itunes.apple.com,Apple Direct
+HOST-SUFFIX,itunes.com,Apple Direct
+HOST-SUFFIX,music.apple.com,Apple Direct
+HOST-SUFFIX,tv.apple.com,Apple Direct
+HOST-SUFFIX,mzstatic.com,Apple Direct
+
+# 系统与应用更新
+HOST,appldnld.apple.com,Apple Direct
+HOST,appldnld.apple.com.edgesuite.net,Apple Direct
+HOST,configuration.apple.com,Apple Direct
+HOST,gdmf.apple.com,Apple Direct
+HOST,gdmf-ados.apple.com,Apple Direct
+HOST,gg.apple.com,Apple Direct
+HOST,gs.apple.com,Apple Direct
+HOST,gsra.apple.com,Apple Direct
+HOST,ig.apple.com,Apple Direct
+HOST,mesu.apple.com,Apple Direct
+HOST,oscdn.apple.com,Apple Direct
+HOST,osrecovery.apple.com,Apple Direct
+HOST,skl.apple.com,Apple Direct
+HOST,swcdn.apple.com,Apple Direct
+HOST,swdist.apple.com,Apple Direct
+HOST,swdownload.apple.com,Apple Direct
+HOST,swscan.apple.com,Apple Direct
+HOST,updates-http.cdn-apple.com,Apple Direct
+HOST,updates.cdn-apple.com,Apple Direct
+HOST,wkms-public.apple.com,Apple Direct
+HOST,xp.apple.com,Apple Direct

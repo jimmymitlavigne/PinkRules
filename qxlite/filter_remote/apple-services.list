@@ -1,0 +1,25 @@
+# Apple Services：账号、iCloud、地图、定位、查找、天气、Siri 与推送
+USER-AGENT,*com.apple.mobileme.fmip1,Apple Services
+USER-AGENT,*WeatherFoundation*,Apple Services
+USER-AGENT,com.apple.geod*,Apple Services
+USER-AGENT,com.apple.Maps,Apple Services
+USER-AGENT,FindMy*,Apple Services
+USER-AGENT,FMDClient*,Apple Services
+USER-AGENT,FMFD*,Apple Services
+USER-AGENT,fmflocatord*,Apple Services
+USER-AGENT,locationd*,Apple Services
+USER-AGENT,Maps*,Apple Services
+
+HOST-SUFFIX,apple.co,Apple Services
+HOST-SUFFIX,apple.com,Apple Services
+HOST-SUFFIX,apple.com.cn,Apple Services
+HOST-SUFFIX,apple-cloudkit.com,Apple Services
+HOST-SUFFIX,apple-livephotoskit.com,Apple Services
+HOST-SUFFIX,apzones.com,Apple Services
+HOST-SUFFIX,cdn-apple.com,Apple Services
+HOST-SUFFIX,icloud.com,Apple Services
+HOST-SUFFIX,icloud.com.cn,Apple Services
+HOST-SUFFIX,icloud-content.com,Apple Services
+HOST-SUFFIX,me.com,Apple Services
+HOST-SUFFIX,networking.apple,Apple Services
+HOST,api.smoot.apple.cn,Apple Services

@@ -1,0 +1,44 @@
+# News：国际新闻媒体与财经新闻
+
+# BBC News（仅主站；iPlayer App 与媒体接口由 GMedia 处理）
+HOST,bbc.co,News
+HOST,www.bbc.co,News
+HOST,bbc.co.uk,News
+HOST,www.bbc.co.uk,News
+HOST,bbc.com,News
+HOST,www.bbc.com,News
+
+# 美国与国际新闻
+HOST,abcnews.go.com,News
+HOST-SUFFIX,apnews.com,News
+HOST-SUFFIX,bloomberg.cn,News
+HOST-SUFFIX,bloomberg.com,News
+HOST-SUFFIX,cnbc.com,News
+HOST-SUFFIX,cnn.com,News
+HOST-SUFFIX,dowjones.com,News
+HOST-SUFFIX,foxnews.com,News
+HOST-SUFFIX,npr.org,News
+HOST-SUFFIX,nyt.com,News
+HOST-SUFFIX,nytimes.com,News
+HOST-SUFFIX,theatlantic.com,News
+HOST-SUFFIX,time.com,News
+HOST-SUFFIX,washingtonpost.com,News
+HOST-SUFFIX,wsj.com,News
+HOST-SUFFIX,wsj.net,News
+
+# 欧洲与全球新闻
+HOST-SUFFIX,aljazeera.com,News
+HOST-SUFFIX,dw.com,News
+HOST-SUFFIX,economist.com,News
+HOST-SUFFIX,foreignaffairs.com,News
+HOST-SUFFIX,foreignpolicy.com,News
+HOST-SUFFIX,france24.com,News
+HOST-SUFFIX,ft.com,News
+HOST-SUFFIX,politico.com,News
+HOST-SUFFIX,reuters.com,News
+HOST-SUFFIX,theguardian.com,News
+
+# 亚洲新闻
+HOST-SUFFIX,chinatimes.com,News
+HOST-SUFFIX,nikkei.com,News
+HOST-SUFFIX,scmp.com,News

@@ -1,0 +1,11 @@
+# Apple News：Apple News、News+、音频与内容接口
+USER-AGENT,News*,Apple News
+HOST-SUFFIX,apple.news,Apple News
+HOST-SUFFIX,news-assets.apple.com,Apple News
+HOST-SUFFIX,news-client.apple.com,Apple News
+HOST-SUFFIX,news-edge.apple.com,Apple News
+HOST-SUFFIX,news-events.apple.com,Apple News
+HOST-KEYWORD,applenews,Apple News
+HOST,apple.comscoreresearch.com,Apple News
+HOST-SUFFIX,newsletter-edge.apple.com,Apple News
+HOST,news-api.apple.com,Apple News

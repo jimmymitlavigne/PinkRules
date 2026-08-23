@@ -1,0 +1,40 @@
+# AC：学术、国际金融与 AI
+
+# 学术与教育授权
+HOST-SUFFIX,edu,AC
+HOST-SUFFIX,ac.uk,AC
+HOST-SUFFIX,edu.tw,AC
+HOST-SUFFIX,gov.tw,AC
+HOST-SUFFIX,journeyed.com,AC
+HOST-SUFFIX,techsoup.org,AC
+HOST-SUFFIX,datamotion.com,AC
+HOST-SUFFIX,hls.service-now.com,AC
+HOST-SUFFIX,imodules.com,AC
+HOST-SUFFIX,licentie2go.com,AC
+HOST-SUFFIX,thinkedu.com,AC
+HOST-KEYWORD,onthehub,AC
+HOST-KEYWORD,harvard,AC
+
+# 国际金融
+HOST-SUFFIX,credit.com,AC
+HOST-SUFFIX,capitalone.com,AC
+HOST-SUFFIX,uscreditcardguide.com,AC
+HOST-SUFFIX,worldline.com,AC
+HOST-SUFFIX,digitalriver.com,AC
+HOST-KEYWORD,kraken,AC
+HOST-KEYWORD,coinbase,AC
+HOST-KEYWORD,revolut,AC
+HOST-KEYWORD,uphold,AC
+HOST-KEYWORD,monzo,AC
+
+# AI：OpenAI、ChatGPT、Sora 及必要服务端点
+HOST-KEYWORD,chatgpt,AC
+HOST-KEYWORD,openai,AC
+HOST-KEYWORD,sora,AC
+HOST-SUFFIX,ai.com,AC
+HOST-SUFFIX,oaistatic.com,AC
+HOST-SUFFIX,oaiusercontent.com,AC
+# 功能依赖：人机验证与实时语音；共享统计、遥测和功能开关域名不纳入 AC
+HOST-SUFFIX,client-api.arkoselabs.com,AC
+HOST-SUFFIX,host.livekit.cloud,AC
+HOST-SUFFIX,turn.livekit.cloud,AC

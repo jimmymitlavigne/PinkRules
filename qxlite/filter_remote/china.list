@@ -1,0 +1,140 @@
+# China：中国大陆影音、常用服务、域名与 IP
+
+# > 中国大陆影音
+# AcFun
+USER-AGENT,AcFun*,China
+HOST-SUFFIX,acfun.com,China
+HOST-SUFFIX,acfun.tv,China
+HOST-SUFFIX,aixifan.com,China
+
+# Bilibili
+USER-AGENT,bili*,China
+USER-AGENT,Bilibili*,China
+HOST-SUFFIX,acg.tv,China
+HOST-SUFFIX,acgvideo.com,China
+HOST-SUFFIX,b23.tv,China
+HOST-SUFFIX,biliapi.com,China
+HOST-SUFFIX,biliapi.net,China
+HOST-SUFFIX,bilibili.com,China
+HOST-SUFFIX,biligame.com,China
+HOST-SUFFIX,biligame.net,China
+HOST-SUFFIX,bilivideo.com,China
+HOST-SUFFIX,hdslb.com,China
+HOST-SUFFIX,im9.com,China
+HOST-SUFFIX,smtcdns.net,China
+
+# iQiyi
+USER-AGENT,QIYI*,China
+USER-AGENT,iQiYi*,China
+USER-AGENT,PPStream*,China
+USER-AGENT,QYPlayer*,China
+HOST-SUFFIX,iqiyi.com,China
+HOST-SUFFIX,iqiyipic.com,China
+HOST-SUFFIX,qy.net,China
+HOST-SUFFIX,71.am,China
+
+# Kugou & Kuwo
+HOST-SUFFIX,kugou.com,China
+USER-AGENT,%E9%85%B7%E6%88%91%E9%9F%B3%E4%B9%90*,China
+HOST-SUFFIX,koowo.com,China
+
+# Letv
+HOST-SUFFIX,letv.com,China
+
+# MGTV
+USER-AGENT,MGTV*,China
+HOST-SUFFIX,hitv.com,China
+HOST-SUFFIX,hunantv.com,China
+HOST-SUFFIX,mgtv.com,China
+
+# Migu
+USER-AGENT,MiguVideo*,China
+USER-AGENT,%E5%92%AA%E5%92%95%E8%A7%86%E9%A2%91,China
+HOST-SUFFIX,miguvideo.com,China
+
+# MOOMusic / QQMusic / Tencent Video
+USER-AGENT,MOO*,China
+USER-AGENT,QQ%e9%9f%b3%E4%B9%90*,China
+USER-AGENT,QQMusic*,China
+USER-AGENT,live4iphone*,China
+USER-AGENT,qqlive4iphone*,China
+
+# Xiami Music
+USER-AGENT,walkman*,China
+USER-AGENT,xiami*,China
+HOST-SUFFIX,xiami.com,China
+HOST-SUFFIX,xiami.net,China
+
+# Youku
+USER-AGENT,Youku*,China
+USER-AGENT,%E4%BC%98%E9%85%B7*,China
+HOST-SUFFIX,soku.com,China
+HOST-SUFFIX,youku.com,China
+HOST-SUFFIX,ykimg.com,China
+
+# > 中国大陆应用与常用服务
+USER-AGENT,MicroMessenger*,China
+USER-AGENT,WeChat*,China
+USER-AGENT,TIM*,China
+
+# 运营商
+HOST-SUFFIX,10010.com,China
+HOST-SUFFIX,chinamobile.com,China
+HOST-SUFFIX,chinatelecom-h.com,China
+HOST-SUFFIX,chinaunicom.com,China
+
+# 阿里系
+HOST-SUFFIX,aliapp.org,China
+HOST-SUFFIX,alibaba.com,China
+HOST-SUFFIX,alibabacloud.com,China
+HOST-SUFFIX,alicdn.com,China
+HOST-SUFFIX,alipay.com,China
+HOST-SUFFIX,alipayobjects.com,China
+HOST-SUFFIX,aliyun.com,China
+HOST-SUFFIX,amap.com,China
+HOST-SUFFIX,autonavi.com,China
+HOST-SUFFIX,taobao.com,China
+HOST-SUFFIX,taobaocdn.com,China
+HOST-SUFFIX,tmall.com,China
+
+# 百度、京东与常用互联网服务
+HOST-SUFFIX,baidu.com,China
+HOST-SUFFIX,bdimg.com,China
+HOST-SUFFIX,bdstatic.com,China
+HOST-SUFFIX,360.com,China
+HOST-SUFFIX,360buy.com,China
+HOST-SUFFIX,360buyimg.com,China
+HOST-SUFFIX,jd.com,China
+HOST-SUFFIX,jdcdn.com,China
+HOST-SUFFIX,58.com,China
+HOST-SUFFIX,sspai.com,China
+HOST-SUFFIX,smzdm.com,China
+
+# 腾讯与微信
+HOST-SUFFIX,qq.com,China
+HOST-SUFFIX,tencent.com,China
+HOST-SUFFIX,tenpay.com,China
+HOST-SUFFIX,servicewechat.com,China
+HOST-SUFFIX,wechat.com,China
+HOST-SUFFIX,wechatpay.com,China
+HOST-SUFFIX,weixin.com,China
+HOST-SUFFIX,gtimg.com,China
+
+# 网易、小米与其他国内服务
+HOST-SUFFIX,126.com,China
+HOST-SUFFIX,126.net,China
+HOST-SUFFIX,127.net,China
+HOST-SUFFIX,163.com,China
+HOST-SUFFIX,163yun.com,China
+HOST-SUFFIX,netease.com,China
+HOST-SUFFIX,mi.com,China
+HOST-SUFFIX,xiaomi.com,China
+HOST-SUFFIX,sina.com,China
+HOST-SUFFIX,sogou.com,China
+HOST-SUFFIX,sogoucdn.com,China
+HOST-SUFFIX,sohu.com,China
+HOST-SUFFIX,youdao.com,China
+
+# > 通用中国大陆匹配
+HOST-SUFFIX,cn,China
+GEOIP,CN,China

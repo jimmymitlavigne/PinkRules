@@ -1,0 +1,5 @@
+# ESPN
+USER-AGENT,espn*,ESPN
+HOST-SUFFIX,es.pn,ESPN
+HOST-SUFFIX,us.edge.bamgrid.com,ESPN
+HOST-KEYWORD,espn,ESPN

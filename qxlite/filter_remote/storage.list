@@ -1,0 +1,19 @@
+# PikPak
+HOST-SUFFIX,mypikpak.com,Storage
+HOST-SUFFIX,mypikpak.net,Storage
+;;HOST-SUFFIX,onedrive.com,Storage
+;HOST-SUFFIX,live.com,Storage
+;;HOST-SUFFIX,mesh.com,Storage
+;HOST-SUFFIX,sfx.ms,Storage
+;HOST-SUFFIX,microsoft.com,Storage
+;HOST-SUFFIX,office.com,Storage
+;HOST-SUFFIX,fabric.io,Storage
+;HOST-SUFFIX,sharepoint.com,Storage
+# OneDrive 大文件传输
+HOST-SUFFIX,api.onedrive.com,Storage
+HOST-SUFFIX,files.1drv.com,Storage
+HOST-SUFFIX,storage.live.com,Storage
+HOST-SUFFIX,livefilestore.com,Storage
+HOST-SUFFIX,storage.msn.com,Storage
+HOST-SUFFIX,microsoftpersonalcontent.com,Storage
+HOST-KEYWORD,sharedcloud-production,Storage

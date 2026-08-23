@@ -1,0 +1,12 @@
+# Social：豆瓣、微博、头条、知乎、抖音、小红书与 Soul
+HOST-KEYWORD,douban,Social
+HOST-SUFFIX,weibo.cn,Social
+HOST-SUFFIX,weibo.com,Social
+HOST-SUFFIX,toutiao.com,Social
+HOST-SUFFIX,jinritoutiao.com,Social
+HOST-SUFFIX,toutiaoimg.com,Social
+HOST-KEYWORD,zhihu,Social
+HOST-KEYWORD,douyin,Social
+HOST-KEYWORD,xiaohongshu,Social
+HOST-KEYWORD,xhscdn,Social
+HOST-KEYWORD,soulapp,Social

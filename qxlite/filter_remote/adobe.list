@@ -1,0 +1,9 @@
+# > Adobe
+USER-AGENT,creativecloud*,Adobe
+HOST-SUFFIX,typekit.com,Adobe
+HOST-SUFFIX,typekit.net,Adobe
+HOST-SUFFIX,acrobat.com,Adobe
+HOST-SUFFIX,myportfolio.com,Adobe
+HOST-SUFFIX,prosite.com,Adobe
+HOST-KEYWORD,adobe,Adobe
+HOST-KEYWORD,behance,Adobe
