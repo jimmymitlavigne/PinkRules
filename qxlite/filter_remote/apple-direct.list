@@ -13,6 +13,9 @@ HOST-SUFFIX,music.apple.com,Apple Direct
 HOST-SUFFIX,tv.apple.com,Apple Direct
 HOST-SUFFIX,mzstatic.com,Apple Direct
 
+# iCloud Drive、照片、备份与附件内容
+HOST-SUFFIX,icloud-content.com,Apple Direct
+
 # 系统与应用更新
 HOST,appldnld.apple.com,Apple Direct
 HOST,appldnld.apple.com.edgesuite.net,Apple Direct

@@ -20,6 +20,7 @@ Apple 已拆成两个明确策略，`Apple Direct` 排在 `Apple Services` 前�
 
 - `Apple Direct`：固定 `direct`，负责 Apple Music、Apple TV、App Store、TestFlight、应用内容、系统和应用更新。包含 Apple 官方列出的 `*.itunes.apple.com`、`*.apps.apple.com`、`*.mzstatic.com` 以及软件更新端点。
 - `Apple Services`：负责 Apple 账号、iCloud、地图、定位、查找、天气、Siri、推送及剩余 Apple 服务。
+- iCloud 按用途拆分：账号、CloudKit 与同步控制进入 `Apple Services`；`icloud-content.com` 承载的 Drive、照片、备份和附件大流量进入固定直连的 `Apple Direct`；iCloud Mail 继续进入 `Mail`。
 
 没有继续使用 `17.0.0.0/8`，因为整段直连会让 Apple 服务和大流量下载无法真正分开。Apple 端点分类参考：<https://support.apple.com/101555>。
 
