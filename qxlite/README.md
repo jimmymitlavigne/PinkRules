@@ -5,7 +5,7 @@
 ## 内容
 
 - `filter_remote/`：33 个分流规则文件
-- `icon/`：当前配置使用的 36 个远程 PNG 图标
+- `icon/`：当前配置使用的 38 个远程 PNG 图标
 - `filter_remote.conf`：可复制到 Quantumult X 配置中的远程规则订阅段
 - `RULES_REVIEW.md`：分类、排序与校验说明
 

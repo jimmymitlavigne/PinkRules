@@ -4,7 +4,7 @@
 
 ## 本地文件
 
-- 当前本地配置：`PinkRules-iOS-20260824-v37.conf`
+- 当前本地配置：`PinkRules-iOS-20260824-v38.conf`
 - 待确认规则：`quantumult/filter_remote/*.list`
 - 原始配置备份：`quantumult_20260823215638.conf.bak`
 - 原始规则快照：`rules_snapshot/`
