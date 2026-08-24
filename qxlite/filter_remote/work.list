@@ -6,7 +6,10 @@ HOST-SUFFIX,toutiao.com,Work
 HOST-SUFFIX,jinritoutiao.com,Work
 HOST-SUFFIX,toutiaoimg.com,Work
 HOST-KEYWORD,zhihu,Work
+USER-AGENT,Aweme*,Work
 HOST-KEYWORD,douyin,Work
+HOST-KEYWORD,aweme,Work
+HOST-SUFFIX,amemv.com,Work
 HOST-KEYWORD,xiaohongshu,Work
 HOST-KEYWORD,xhscdn,Work
 HOST-KEYWORD,soulapp,Work

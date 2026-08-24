@@ -4,7 +4,7 @@
 
 ## 本地文件
 
-- 当前本地配置：`PinkRules-iOS-20260824-v38.conf`
+- 当前本地配置：`PinkRules-iOS-20260824-v39.conf`
 - 待确认规则：`quantumult/filter_remote/*.list`
 - 原始配置备份：`quantumult_20260823215638.conf.bak`
 - 原始规则快照：`rules_snapshot/`
@@ -31,6 +31,7 @@ Apple 已拆成两个明确策略，`Apple Direct` 排在 `Apple Services` 前�
 - `TV` 仅保留影视、成人内容、番剧索引、字幕和电视服务。
 - Steam、Riot、Blizzard 等游戏规则并入 `Outside`，不再保留独立 Game 策略。
 - `Work` 负责豆瓣、微博、头条、知乎、抖音、小红书和 Soul，默认直连并可切换通用代理或地区策略。
+- 抖音的 `Aweme` 应用/主机及 `amemv.com` 由前置 `Work` 精确匹配，避免被后置 TikTok 的字节系共享域名误分流。
 - `Customer` 只保留明确要求直连的自有服务、远程控制和服务器。
 - Prime Video、ESPN 从 Hulu 拆出独立规则；Hulu 文件只包含 Hulu。
 - PikPak 从 Microsoft 移到 Storage；Microsoft 文件只保留 Microsoft 服务。
