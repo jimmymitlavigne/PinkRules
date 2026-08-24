@@ -1,10 +1,10 @@
 # Quantumult X 分流规则本地整理说明
 
-整理日期：2026-08-23
+整理日期：2026-08-24
 
 ## 本地文件
 
-- 待确认配置：`quantumult_20260823215638.conf`
+- 当前本地配置：`PinkRules-iOS-20260824-v33.conf`
 - 待确认规则：`quantumult/filter_remote/*.list`
 - 原始配置备份：`quantumult_20260823215638.conf.bak`
 - 原始规则快照：`rules_snapshot/`
@@ -18,11 +18,11 @@
 
 Apple 已拆成两个明确策略，`Apple Direct` 排在 `Apple Services` 前：
 
-- `Apple Direct`：固定 `direct`，负责 Apple Music、Apple TV、App Store、TestFlight、应用内容、系统和应用更新。包含 Apple 官方列出的 `*.itunes.apple.com`、`*.apps.apple.com`、`*.mzstatic.com` 以及软件更新端点。
-- `Apple Services`：负责 Apple 账号、iCloud、地图、定位、查找、天气、Siri、推送及剩余 Apple 服务。
-- iCloud 按用途拆分：账号、CloudKit 与同步控制进入 `Apple Services`；`icloud-content.com` 承载的 Drive、照片、备份和附件大流量进入固定直连的 `Apple Direct`；iCloud Mail 继续进入 `Mail`。
+- `Apple Direct`：默认 `direct`，并可手动切换 `proxy` 或 `灰原哀`；负责 Apple Music、Apple TV、App Store、TestFlight、应用内容、系统和应用更新。包含 Apple 官方列出的 `*.itunes.apple.com`、`*.apps.apple.com`、`*.mzstatic.com` 以及软件更新端点。
+- `Apple Services`：默认 `direct`，负责 Apple 账号、iCloud、地图、定位、查找、天气、Siri、推送及剩余 Apple 服务，并包含 Apple 官方列出的 iCloud DNS 域名 `apple-dns.net`。
+- iCloud 按用途拆分：账号、CloudKit 与同步控制进入 `Apple Services`；`icloud-content.com` 承载的 Drive、照片、备份和附件大流量进入默认直连的 `Apple Direct`；iCloud Mail 继续进入 `Mail`。
 
-没有继续使用 `17.0.0.0/8`，因为整段直连会让 Apple 服务和大流量下载无法真正分开。Apple 端点分类参考：<https://support.apple.com/101555>。
+当前完整配置仍在 `[general] excluded_routes` 中保留 `17.0.0.0/8`。该网段流量会绕过 Quantumult X，因此命中 Apple IP 时无法由上述策略切换；建议后续从 `excluded_routes` 删除，改由 Apple 策略的默认 `direct` 控制。Apple 端点分类参考：<https://support.apple.com/101555>。
 
 ## 分类校正
 
@@ -60,6 +60,6 @@ News 和 Outside 均放在 China 前，用于优先处理 `bloomberg.cn` 等明�
 
 已移除 `AdBlock` 策略组、广告/劫持分流订阅、小红书和 YouTube 去广告复写，以及可能重新引入去广告脚本的旧合集。迅雷版权规避的三条本地 `reject` 不是广告规则，因此保留。
 
-当前共有 33 个分流文件、1,249 条活动规则。校验项目包括：配置引用与本地文件一一对应、策略名称一致、规则字段完整、文件内无重复、没有被前置规则完整覆盖而永远无法命中的后置规则，以及没有同策略的非必要包含规则。当前保留的 56 组跨策略包含关系均用于“专用策略优先、宽泛规则兜底”。
+当前共有 33 个分流文件、1,250 条活动规则。校验项目包括：配置引用与本地文件一一对应、策略名称一致、规则字段完整、文件内无重复、没有被前置规则完整覆盖而永远无法命中的后置规则，以及没有同策略的非必要包含规则。当前保留的 56 组跨策略包含关系均用于“专用策略优先、宽泛规则兜底”。
 
 Netflix 官方移动交付域名参考：<https://openconnect.netflix.com/mobiledeliverydomains.txt>。Netflix 官方说明其网页使用 AWS、视频内容由 Open Connect 提供；网段按 RIPEstat 当前公布的 AS2906 路由聚合，快照日期为 2026-08-23。
