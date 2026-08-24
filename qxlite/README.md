@@ -5,6 +5,7 @@
 ## 内容
 
 - `filter_remote/`：33 个分流规则文件
+- `icon/`：当前配置使用的 36 个远程 PNG 图标
 - `filter_remote.conf`：可复制到 Quantumult X 配置中的远程规则订阅段
 - `RULES_REVIEW.md`：分类、排序与校验说明
 
@@ -12,4 +13,4 @@
 
 Apple 分为 `Apple Direct`、`Apple Services` 和 `Apple News`；`Apple Services` 已覆盖 Apple 官方列出的 iCloud DNS 域名 `apple-dns.net`。国际新闻使用 `News`；海外影音使用 `GMedia`；通用境外服务使用 `Outside`；中国大陆服务使用 `China`。
 
-完整配置未上传，因为本地版本含节点订阅凭据和代理密码。
+所有有效分流规则和自有图标均集中在 `qxlite/` 目录下；完整配置未上传，因为本地版本含节点订阅凭据和代理密码。
