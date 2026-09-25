@@ -1,8 +1,8 @@
 #!name=NewsBilingual 新闻双语（HTML / WebView）
-#!desc=点击双语；Google / DeepL / Gemini / DeepSeek。原生正文页需单独验证。
-#!version=0.2.0
+#!desc=点击双语；Google / DeepL / Gemini / DeepSeek。含 Safari 诊断页和 QX 脚本日志。
+#!version=0.2.1
 hostname = wsj.com, www.wsj.com, nytimes.com, www.nytimes.com, ft.com, www.ft.com, economist.com, www.economist.com
 
 ^https:\/\/(?:www\.)?(?:wsj\.com|nytimes\.com|ft\.com|economist\.com)(?::443)?\/__news_bilingual__\/v2\/translate(?:\?.*)?$ url script-analyze-echo-response https://raw.githubusercontent.com/jimmymitlavigne/PinkRules/master/quantumult/news-bilingual/NewsBilingual.js
-^https:\/\/(?:www\.)?(?:wsj\.com|nytimes\.com|ft\.com|economist\.com)(?::443)?\/__news_bilingual__\/v2\/(?:client\.js|status)(?:\?.*)?$ url script-echo-response https://raw.githubusercontent.com/jimmymitlavigne/PinkRules/master/quantumult/news-bilingual/NewsBilingual.js
+^https:\/\/(?:www\.)?(?:wsj\.com|nytimes\.com|ft\.com|economist\.com)(?::443)?\/__news_bilingual__\/v2\/(?:client\.js|status|diagnostic)(?:\?.*)?$ url script-echo-response https://raw.githubusercontent.com/jimmymitlavigne/PinkRules/master/quantumult/news-bilingual/NewsBilingual.js
 ^https:\/\/(?:www\.)?(?:wsj\.com|nytimes\.com|ft\.com|economist\.com)(?::443)?\/(?!__news_bilingual__\/) url script-response-body https://raw.githubusercontent.com/jimmymitlavigne/PinkRules/master/quantumult/news-bilingual/NewsBilingual.js

@@ -1,4 +1,4 @@
-# NewsBilingual 0.2.0 — Quantumult X 新闻双语
+# NewsBilingual 0.2.1 — Quantumult X 新闻双语
 
 默认 Google 翻译，可切换 DeepL、Gemini、DeepSeek。适配目标是 WSJ、NYT、FT 和《经济学人》的文章 HTML / WebView。点击“**双语**”后逐段显示英文原文和中文；“**原文**”隐藏译文，再次显示会复用当前页面会话中的翻译。支持长段落分割、按总长度组批、停止、失败续译和页面切换时取消旧结果。
 
@@ -21,7 +21,7 @@
 2. 只将 **`NewsBilingual.js`** 放入“文件 → 我的 iPhone → Quantumult X → Scripts”（或 Quantumult X 的 iCloud Scripts 目录）。不要将整个 ZIP 当成重写导入。
 3. 打开 Quantumult X 配置编辑器，将 `NewsBilingual.snippet` 中三条 `^https:` 开头的规则追加到 `[rewrite_local]` 下，保持文件中的顺序；将 `hostname` 的域名追加到已有 `[mitm]` 的 `hostname` 列表，不要覆盖其他域名。
 4. 启用重写、MitM，并安装和信任 Quantumult X 的 MitM 证书。需要支持 `script-analyze-echo-response` 的版本。
-5. 在 Safari 打开 `https://www.ft.com/__news_bilingual__/v2/status`。若返回含 `"version":"0.2.0"` 的 JSON，说明本地脚本路由已运行。此检查不验证文章提取或翻译网络。
+5. 在 Safari 打开 `https://www.ft.com/__news_bilingual__/v2/diagnostic`。若看到 NewsBilingual 诊断页，说明本地脚本路由已运行；点“测试翻译”可继续检查翻译网络。若看到 FT 的 404 页面，说明重写没有命中。
 6. 打开你有权限阅读的文章，看到“Google / 双语 / 原文”后点“双语”。App 内使用相同 HTML 链路的正文也可尝试。
 
 ## 只导入一个远程链接
@@ -63,6 +63,12 @@ Quantumult X 改写的是网络响应。能注入按钮的前提是 App 的正�
 当前实现保留 CSP，复用 `script-src-elem` / `script-src` 中可用的 nonce。从已渲染的文章正文节点提取文本，跳过 `hidden`、`aria-hidden`、`display:none` 和 `visibility:hidden` 的节点，不从内部 JSON 中提取全文。文章订阅与访问权限仍由原站控制。
 
 因此“全部是 App Store 最新版”能描述目标，但不能替代实测。要定位没有按钮的 App，需要其 Quantumult X HTTP Analyzer 中实际文章请求的 URL、Content-Type、响应正文结构，以及 App 版本号；提供样本时去掉 Cookie、Authorization 和账户信息。
+
+## 查看日志
+
+打开 Quantumult X 的“网络活动”，顶部切换到第 4 个“脚本记录”按钮，搜索 `NewsBilingual`。0.2.1 会记录正文响应是否跳过、是否注入按钮、本地页面脚本是否加载、使用哪个翻译服务、服务 HTTP 状态和错误原因；不会记录文章全文或 API Key。
+
+同时在“网络活动”的 TCP 请求中搜索新闻域名。MitM 成功通常显示绿锁，重写实际修改响应时会显示红色铅笔。打开记录可看命中的规则和 Content-Type。如果 App 正文请求是 JSON / Protobuf，且没有 HTML 页面加载记录，现有 WebView 方案无法在原生正文中显示按钮。
 
 ## 本地验证
 
