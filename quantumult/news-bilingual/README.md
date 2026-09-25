@@ -1,4 +1,4 @@
-# NewsBilingual 0.2.1 — Quantumult X 新闻双语
+# NewsBilingual 0.2.2 — Quantumult X 新闻双语
 
 默认 Google 翻译，可切换 DeepL、Gemini、DeepSeek。适配目标是 WSJ、NYT、FT 和《经济学人》的文章 HTML / WebView。点击“**双语**”后逐段显示英文原文和中文；“**原文**”隐藏译文，再次显示会复用当前页面会话中的翻译。支持长段落分割、按总长度组批、停止、失败续译和页面切换时取消旧结果。
 
@@ -66,7 +66,7 @@ Quantumult X 改写的是网络响应。能注入按钮的前提是 App 的正�
 
 ## 查看日志
 
-打开 Quantumult X 的“网络活动”，顶部切换到第 4 个“脚本记录”按钮，搜索 `NewsBilingual`。0.2.1 会记录正文响应是否跳过、是否注入按钮、本地页面脚本是否加载、使用哪个翻译服务、服务 HTTP 状态和错误原因；不会记录文章全文或 API Key。
+打开 Quantumult X 的“网络活动”，顶部切换到第 4 个“脚本记录”按钮，搜索 `NewsBilingual`。0.2.2 会记录正文响应是否跳过、是否注入按钮、本地页面脚本是否加载、使用哪个翻译服务、服务 HTTP 状态和错误原因；不会记录文章全文或 API Key。常见图片、字体、CSS、JS 和视频路径不再进入正文脚本，减少无意义记录。
 
 同时在“网络活动”的 TCP 请求中搜索新闻域名。MitM 成功通常显示绿锁，重写实际修改响应时会显示红色铅笔。打开记录可看命中的规则和 Content-Type。如果 App 正文请求是 JSON / Protobuf，且没有 HTML 页面加载记录，现有 WebView 方案无法在原生正文中显示按钮。
 
