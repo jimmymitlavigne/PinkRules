@@ -1,102 +1,83 @@
-# NewsBilingual 0.3.0 — Quantumult X 新闻双语
+# NewsBilingual 0.3.1 — Quantumult X 新闻双语
 
-默认 Google 翻译，可切换 DeepL、Gemini、DeepSeek。适配目标是 WSJ、NYT、FT 和《经济学人》的文章 HTML / WebView。点击“**双语**”后逐段显示英文原文和中文；“**原文**”隐藏译文，再次显示会复用当前页面会话中的翻译。支持长段落分割、按总长度组批、停止、失败续译和页面切换时取消旧结果。
+默认 Google 翻译，可切换 DeepL、Gemini、DeepSeek。点击“显示双语”显示逐段中文，点击“显示原文”隐藏译文。译文保留在当前页面内存中，切换显示不会重复请求；支持停止、长段落拆分和失败续译。
 
-**当前状态：网页方案已完成本地浏览器验证，Google 已做真实接口测试。2026-09-25 的用户真机抓包确认 NYT App 的 `Asset` GraphQL 响应内含完整 Hybrid HTML，0.3.0 已适配该结构；修改后的版本仍需用户在 iPhone 上复测。FT 抓包中的正文来自本地缓存或 App 内数据层，没有出现可改写的正文响应。WSJ 和 Economist 尚无正文抓包样本。**
+正文右下角只显示一个按钮：首次为“显示双语”，点击后开始翻译并变为“显示原文”。再次点击会隐藏译文并停止未完成的翻译等待；下次显示双语时复用已完成的译文。服务选择通过 BoxJS 的 provider 配置完成，正文界面不再放下拉菜单或额外按钮。
 
-## 一个脚本和一次导入是什么关系
+## 安装与更新
 
-现在全部运行逻辑合并为 **一个 `NewsBilingual.js`**，不再需要旧版的三个 JS，也不需要 Data 目录文件。
+在 Quantumult X 的重写引用中添加或刷新这个链接：
 
-- `.snippet` 告诉 Quantumult X 拦截哪些请求、在哪个阶段运行脚本。
-- `.js` 包含按钮、正文处理和翻译逻辑。本功能需要 JS，普通文本替换规则无法完成按需翻译。
-- `.snippet` 引用远程 JS 时，Quantumult X 自动加载 JS，用户只需要添加 **一个重写订阅链接**，无需手动导入 JS。
-- 你提供的 [DualSubs Spotify 配置](https://github.com/DualSubs/Spotify/releases/latest/download/DualSubs.Spotify.snippet) 也采用远程 JS 引用，配置本身并不包含完整业务逻辑。
+https://raw.githubusercontent.com/jimmymitlavigne/PinkRules/master/quantumult/news-bilingual/NewsBilingual.snippet
 
-当前公开订阅：
+只需导入这一个链接。它引用同目录下的一个 `NewsBilingual.js`；JS 是必需的，但不需要手动导入。可选的 BoxJS 文件用于保存翻译服务配置。
+
+1. 启用此重写引用和 MitM，安装并信任 QX 的 MitM 证书。避免同时启用多份 NewsBilingual。
+2. 更新后确认订阅显示 `#!version=0.3.1`，MitM 包含 `samizdat-graphql.nytimes.com`、`www.nytimes.com` 和 `app.ft.com`。
+3. 关闭再打开 NYT App，选择一篇尚未缓存的文章。旧的离线文章可能没有网络请求，因而不会经过脚本。
+4. 在 Safari 打开 [诊断页](https://www.ft.com/__news_bilingual__/v2/diagnostic)。应显示 0.3.1；点击“测试翻译”可单独检查所选翻译服务。
+
+远程 JS 和注入客户端地址都带版本参数，减少更新后继续使用旧脚本的情况。
+
+## 基于抓包的适配范围
+
+| 对象 | 这次抓包的证据与处理 |
+|---|---|
+| NYT App | 26 篇 Article 的 GraphQL 响应包含 `data.anyWork.hybridBody.main.contents` HTML；逐篇离线回放已验证注入、按钮显示和模拟翻译切换。 |
+| NYT 栏目数据 | 1 条 LegacyCollection 保持不变；空响应也不改写。 |
+| FT | 804 条 `www.ft.com/__origami/service/image/` 图片请求全部排除，修复旧规则漏写一个下划线的问题。支持 app.ft.com 的网络 HTML，但抓包中没有该正文响应。 |
+| WSJ、Economist | 保留主域名 HTML 支持；没有足够的 App 正文响应样本可验证。 |
+
+**这些结果不等同于 iPhone App 实测成功。** 浏览器回放禁用了原站脚本，翻译使用本地模拟响应；无法验证 App 的缓存、WebView 运行方式或 QX 真机执行。FT 正文可能来自缓存，也可能未包含在本次导出中；仅凭这份文件无法确定原因。
+
+交付目标是四款 iOS App 的正文右下角按钮点击翻译；当前属于 NYT 待真机复测的适配版本，四款 App 的整体交付尚未完成。
+
+QX 可以改写网络 HTML，也可以改写 JSON 内明确的 HTML 字段。纯原生正文不会因为插入 HTML 就自动产生按钮。当前不修改访问权限、付费墙或账户状态；翻译服务只在点击“显示双语”后接收页面提取的正文。
+
+## 日志与诊断
+
+在 QX“网络活动 → 脚本记录”中搜索 NewsBilingual。NYT 正文经过改写时可看到：
 
 ```text
-https://raw.githubusercontent.com/jimmymitlavigne/PinkRules/master/quantumult/news-bilingual/NewsBilingual.snippet
+[NewsBilingual v0.3.1] loader injected format=nyt-graphql path=/graphql/v2 ...
+[NewsBilingual v0.3.1] client.js served host=www.nytimes.com
 ```
 
-Quantumult X 只需导入这一个 `.snippet` 链接。它会远程加载同目录中的一个 `NewsBilingual.js`。
+第一行说明 HTML 中加入了加载器，第二行说明客户端请求到达 QX；两者本身不证明按钮已渲染。点击“显示双语”后应出现 `translate start`、服务的 HTTP 状态和 `translate success` 或 `translate error`。
 
-## 本地安装
-
-1. 若已装上一版，先停用旧 NewsBilingual 重写，避免两个版本同时匹配。
-2. 只将 **`NewsBilingual.js`** 放入“文件 → 我的 iPhone → Quantumult X → Scripts”（或 Quantumult X 的 iCloud Scripts 目录）。不要将整个 ZIP 当成重写导入。
-3. 打开 Quantumult X 配置编辑器，将 `NewsBilingual.snippet` 中四条 `^https:` 开头的规则追加到 `[rewrite_local]` 下，保持文件中的顺序；将 `hostname` 的域名追加到已有 `[mitm]` 的 `hostname` 列表，不要覆盖其他域名。
-4. 启用重写、MitM，并安装和信任 Quantumult X 的 MitM 证书。需要支持 `script-analyze-echo-response` 的版本。
-5. 在 Safari 打开 `https://www.ft.com/__news_bilingual__/v2/diagnostic`。若看到 NewsBilingual 诊断页，说明本地脚本路由已运行；点“测试翻译”可继续检查翻译网络。若看到 FT 的 404 页面，说明重写没有命中。
-6. 打开你有权限阅读的文章，看到“Google / 双语 / 原文”后点“双语”。NYT App 需要命中 `samizdat-graphql.nytimes.com/graphql/v2?operationName=Asset`；脚本记录应显示 `button injected format=nyt-graphql`。
-
-## 只导入一个远程链接
-
-将未填写密钥的 `NewsBilingual.js` 放到你控制的 HTTPS 静态目录（例如 GitHub raw 文件目录），然后运行：
-
-```sh
-node quantumult-x/tools/build.cjs 'https://raw.githubusercontent.com/你的账号/你的仓库/main/quantumult-x'
-```
-
-这会生成 `NewsBilingual.remote.snippet`，四条规则都引用同一个远程 JS 地址。将这个 `.snippet` 一起上传，再把它的 raw HTTPS 地址添加到 Quantumult X“重写 → 引用”。**构建命令不会上传文件，不会创建 GitHub 仓库。**上传后应确认 JS 地址直接返回代码，而不是 GitHub 的 HTML 预览页。
-
-`build.cjs` 会重新生成 JS，请在发布的文件中保留空密钥。不要把填写了真实 API Key 的脚本上传到公开目录。远程安装建议用下面的 BoxJS 配置，以免脚本更新覆盖设置。
+诊断页会显示最近一次“最近响应 / 正文注入 / 客户端加载 / 翻译结果”的时间和版本。记录保存在 QX 本机，只包含域名、格式、服务、状态码等运行信息，不保存文章全文、Cookie 或 API Key。这是最近事件，可能来自其他文章或诊断测试，判断时需核对时间；最近响应的 HTTP 数字表示新闻服务器响应状态；翻译结果的 HTTP 数字表示本地翻译接口结果码。
 
 ## 配置翻译服务
 
-Google 默认免 Key，使用 `translate.googleapis.com/translate_a/single` 非正式接口；当前测试成功不代表它有可用性保证。正文会在点击“双语”后发往所选翻译服务，不会静默换用另一家。
+Google 默认免 Key，使用 translate.googleapis.com 的非正式接口，服务可用性由其运营方决定。其他服务需要对应 API Key；脚本不会自动改用另一家。
 
-本地用户可编辑 `NewsBilingual.js` 顶部 `LOCAL_CONFIG`：
+可将 [BoxJS 配置](https://raw.githubusercontent.com/jimmymitlavigne/PinkRules/master/quantumult/news-bilingual/NewsBilingual.boxjs.json) 添加到已有 BoxJS，填写并保存设置；更新后重新载入文章。BoxJS 手机端导入仍待实测。
 
 | 字段 | 用途 |
 |---|---|
-| `provider` | 默认服务：`google` / `deepl` / `gemini` / `deepseek` |
-| `deeplKey` | DeepL API Key，不是 DeepL 网页登录密码 |
-| `deeplApiHost` | 免费 API：`api-free.deepl.com`；付费 API：`api.deepl.com` |
-| `geminiKey` / `geminiModel` | Gemini API Key 与账户可用的模型 ID |
-| `deepseekKey` / `deepseekModel` | DeepSeek API Key 与账户可用的模型 ID |
+| provider | google / deepl / gemini / deepseek |
+| deeplKey | DeepL API Key |
+| deeplApiHost | 免费 api-free.deepl.com，付费 api.deepl.com |
+| geminiKey / geminiModel | Gemini API Key / 可用模型 ID |
+| deepseekKey / deepseekModel | DeepSeek API Key / 可用模型 ID |
 
-可选的 `NewsBilingual.boxjs.json` 是 BoxJS 应用配置，不是第二个必需运行脚本。已使用 BoxJS 的用户可将它作为应用订阅导入后填写设置并保存。BoxJS 中的 `NewsBilingual.*` 值优先于 `LOCAL_CONFIG`，更新设置后需要重新载入文章。此 JSON 结构已按 DualSubs 的公开 BoxJS 配置核对，未在手机 BoxJS 中实测。
+本地安装也可编辑 JS 顶部的 LOCAL_CONFIG。NewsBilingual.* BoxJS 设置优先于脚本默认值。API Key 只在 QX 脚本端使用，不传入网页。真实付费 API 尚未测试。
 
-API Key 只在 Quantumult X 脚本侧使用，不放入注入网页、状态接口或翻译请求正文；新闻站点 Cookie 和 Authorization 不会转发给翻译服务。译文仅做内存缓存，不持久保存全文；重新载入页面后可能再次调用服务。
+## 源码与验证
 
-## App 兼容边界
-
-Quantumult X 改写的是网络响应。能注入按钮的前提是 App 的正文使用可改写的 HTML，并允许执行页面脚本。NYT App 虽然请求的是 JSON，但抓包显示 `data.anyWork.hybridBody.main.contents` 内是完整 HTML，因此 0.3.0 会只改写这个字段并加载双语客户端。纯原生 UI 接收 JSON / Protobuf 后直接绘制正文时，改写响应不能凭空创建原生按钮。DualSubs 可以使用 Spotify 已有的歌词界面显示改写后的歌词，这不等于新闻 App 也有可复用的双语控件。
-
-以下情况需要基于真实正文响应进一步适配：正文走其他域名或 API；证书固定使 MitM 失败；离线缓存没有经过重写；页面 CSP 不允许注入脚本或同源请求；正文不是常规文章节点。当前 App API 只加入了抓包证实的 `samizdat-graphql.nytimes.com`。`app.ft.com` 已加入 MitM 和 HTML 路由，但这份 FT 抓包没有出现该域名的正文响应，因此尚不能验证按钮。
-
-当前实现保留 CSP，复用 `script-src-elem` / `script-src` 中可用的 nonce。从已渲染的文章正文节点提取文本，跳过 `hidden`、`aria-hidden`、`display:none` 和 `visibility:hidden` 的节点，不从内部 JSON 中提取全文。文章订阅与访问权限仍由原站控制。
-
-因此“全部是 App Store 最新版”能描述目标，但不能替代实测。要定位没有按钮的 App，需要其 Quantumult X HTTP Analyzer 中实际文章请求的 URL、Content-Type、响应正文结构，以及 App 版本号；提供样本时去掉 Cookie、Authorization 和账户信息。
-
-## 查看日志
-
-打开 Quantumult X 的“网络活动”，顶部切换到第 4 个“脚本记录”按钮，搜索 `NewsBilingual`。0.3.0 会记录正文响应是否跳过、是否注入按钮、本地页面脚本是否加载、使用哪个翻译服务、服务 HTTP 状态和错误原因；不会记录文章全文或 API Key。常见图片、字体、CSS、JS 和视频路径不再进入正文脚本，减少无意义记录。
-
-NYT App 成功注入时依次可看到：
-
-```text
-[NewsBilingual v0.3.0] button injected format=nyt-graphql path=/graphql/v2 ...
-[NewsBilingual v0.3.0] client.js served host=www.nytimes.com
-```
-
-点击“双语”后还应出现 `translate start`、翻译服务的 HTTP 状态和 `translate success`。只看到图片或静态资源记录，不能证明正文已命中。
-
-同时在“网络活动”的 TCP 请求中搜索新闻域名。MitM 成功通常显示绿锁，重写实际修改响应时会显示红色铅笔。打开记录可看命中的规则和 Content-Type。如果 App 正文请求是 JSON / Protobuf，且没有 HTML 页面加载记录，现有 WebView 方案无法在原生正文中显示按钮。
-
-## 本地验证
+在包含 src/、tools/、tests/ 的项目目录运行：
 
 ```sh
-node quantumult-x/tools/build.cjs
-node --test quantumult-x/tests/core.test.cjs
-# 浏览器测试需要安装 Playwright，并通过 CHROME_PATH 指定 Chrome 可执行文件（macOS 默认已设）。
-node quantumult-x/tests/browser.cjs
-# 可选，真实 Google 网络测试，只发送两句人工测试文本：
-node quantumult-x/tools/google-smoke.cjs
-python3 quantumult-x/tools/package.py
+node tools/build.cjs 'https://raw.githubusercontent.com/jimmymitlavigne/PinkRules/master/quantumult/news-bilingual'
+node --test tests/core.test.cjs
+# 需要 Playwright；CHROME_PATH 可指定 Chrome 可执行文件。
+node tests/browser.cjs
+# 可选：只读本地 QX 导出，所有页面请求被拦截，译文使用本地模拟。
+node tools/replay-capture.cjs '/path/to/unpacked-export' --browser
 ```
 
-具体测试边界见 `VALIDATION.md`。四家域名的浏览器测试使用人工 HTML 样本；NYT GraphQL 改写另用用户导出的真实响应结构验证，但还没有在修改后的 iPhone App 中完成点击测试。
+构建生成的 NewsBilingual.snippet 使用本地 JS；NewsBilingual.remote.snippet 使用远程 JS。发布时将后者作为公开的 NewsBilingual.snippet。本地使用者把 JS 放入 QX Scripts，并将本地配置中的四条规则和 hostname 分别合入 [rewrite_local] 与 [mitm]。
 
-参考：[Quantumult X 官方配置与脚本 API](https://github.com/crossutility/Quantumult-X/blob/master/sample.conf)、[DeepL 翻译 API](https://developers.deepl.com/api-reference/translate/request-translation)、[Gemini generateContent](https://ai.google.dev/api/generate-content)、[DeepSeek Chat Completions](https://api-docs.deepseek.com/api/create-chat-completion/)。
+验证细节见 [VALIDATION.md](VALIDATION.md)。抓包原文件、新闻正文、请求头和账户信息不包含在公开仓库中。
+
+参考：[QX 官方重写说明](https://github.com/crossutility/Quantumult-X/blob/master/sample.conf)、[DualSubs Spotify](https://github.com/DualSubs/Spotify/releases/latest/download/DualSubs.Spotify.snippet)。QX 官方说明指出正文改写会自动处理长度与编码响应头，因此本脚本不手工处理 gzip 或 Content-Length。
