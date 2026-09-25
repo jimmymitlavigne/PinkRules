@@ -1,0 +1,91 @@
+{
+  "id": "NewsBilingual.subscription",
+  "name": "NewsBilingual 新闻双语",
+  "apps": [
+    {
+      "id": "NewsBilingual",
+      "name": "NewsBilingual 新闻双语",
+      "descs_html": [
+        "Google 默认免 Key；其他服务填写后保存。配置保存在 Quantumult X 本机。"
+      ],
+      "keys": [
+        "NewsBilingual.provider",
+        "NewsBilingual.deeplKey",
+        "NewsBilingual.deeplApiHost",
+        "NewsBilingual.geminiKey",
+        "NewsBilingual.geminiModel",
+        "NewsBilingual.deepseekKey",
+        "NewsBilingual.deepseekModel"
+      ],
+      "settings": [
+        {
+          "id": "NewsBilingual.provider",
+          "name": "默认翻译服务",
+          "type": "selects",
+          "val": "google",
+          "desc": "google / deepl / gemini / deepseek",
+          "items": [
+            {
+              "key": "google",
+              "label": "google"
+            },
+            {
+              "key": "deepl",
+              "label": "deepl"
+            },
+            {
+              "key": "gemini",
+              "label": "gemini"
+            },
+            {
+              "key": "deepseek",
+              "label": "deepseek"
+            }
+          ]
+        },
+        {
+          "id": "NewsBilingual.deeplKey",
+          "name": "DeepL API Key",
+          "type": "text",
+          "val": "",
+          "desc": ""
+        },
+        {
+          "id": "NewsBilingual.deeplApiHost",
+          "name": "DeepL API 主机",
+          "type": "text",
+          "val": "api-free.deepl.com",
+          "desc": "免费 api-free.deepl.com；付费 api.deepl.com"
+        },
+        {
+          "id": "NewsBilingual.geminiKey",
+          "name": "Gemini API Key",
+          "type": "text",
+          "val": "",
+          "desc": ""
+        },
+        {
+          "id": "NewsBilingual.geminiModel",
+          "name": "Gemini 模型",
+          "type": "text",
+          "val": "gemini-3.8-flash",
+          "desc": ""
+        },
+        {
+          "id": "NewsBilingual.deepseekKey",
+          "name": "DeepSeek API Key",
+          "type": "text",
+          "val": "",
+          "desc": ""
+        },
+        {
+          "id": "NewsBilingual.deepseekModel",
+          "name": "DeepSeek 模型",
+          "type": "text",
+          "val": "deepseek-flash",
+          "desc": ""
+        }
+      ]
+    }
+  ]
+}
