@@ -1,8 +1,9 @@
 #!name=NewsBilingual 新闻双语（HTML / WebView）
-#!desc=点击双语；Google / DeepL / Gemini / DeepSeek。含 Safari 诊断页和 QX 脚本日志。
-#!version=0.2.2
-hostname = wsj.com, www.wsj.com, nytimes.com, www.nytimes.com, ft.com, www.ft.com, economist.com, www.economist.com
+#!desc=点击双语；Google / DeepL / Gemini / DeepSeek。支持 NYT App GraphQL 正文。
+#!version=0.3.0
+hostname = wsj.com, www.wsj.com, nytimes.com, www.nytimes.com, samizdat-graphql.nytimes.com, ft.com, www.ft.com, app.ft.com, economist.com, www.economist.com
 
-^https:\/\/(?:www\.)?(?:wsj\.com|nytimes\.com|ft\.com|economist\.com)(?::443)?\/__news_bilingual__\/v2\/translate(?:\?.*)?$ url script-analyze-echo-response https://raw.githubusercontent.com/jimmymitlavigne/PinkRules/master/quantumult/news-bilingual/NewsBilingual.js
-^https:\/\/(?:www\.)?(?:wsj\.com|nytimes\.com|ft\.com|economist\.com)(?::443)?\/__news_bilingual__\/v2\/(?:client\.js|status|diagnostic)(?:\?.*)?$ url script-echo-response https://raw.githubusercontent.com/jimmymitlavigne/PinkRules/master/quantumult/news-bilingual/NewsBilingual.js
-^https:\/\/(?:www\.)?(?:wsj\.com|nytimes\.com|ft\.com|economist\.com)(?::443)?\/(?!__news_bilingual__\/)(?!_origami\/service\/image\/)(?!_next\/|assets?\/|static\/|images?\/|fonts?\/|videos?\/)(?![^?#]*\.(?:avif|bmp|css|gif|ico|jpe?g|js|m4a|m4v|mov|mp3|mp4|m3u8|pdf|png|svg|ttf|webm|webp|woff2?)(?:[?#]|$)) url script-response-body https://raw.githubusercontent.com/jimmymitlavigne/PinkRules/master/quantumult/news-bilingual/NewsBilingual.js
+^https:\/\/(?:(?:www\.)?(?:wsj\.com|nytimes\.com|economist\.com)|(?:www\.|app\.)?ft\.com)(?::443)?\/__news_bilingual__\/v2\/translate(?:\?.*)?$ url script-analyze-echo-response https://raw.githubusercontent.com/jimmymitlavigne/PinkRules/master/quantumult/news-bilingual/NewsBilingual.js
+^https:\/\/(?:(?:www\.)?(?:wsj\.com|nytimes\.com|economist\.com)|(?:www\.|app\.)?ft\.com)(?::443)?\/__news_bilingual__\/v2\/(?:client\.js|status|diagnostic)(?:\?.*)?$ url script-echo-response https://raw.githubusercontent.com/jimmymitlavigne/PinkRules/master/quantumult/news-bilingual/NewsBilingual.js
+^https:\/\/samizdat-graphql\.nytimes\.com\/graphql\/v2\?operationName=Asset(?:&.*)?$ url script-response-body https://raw.githubusercontent.com/jimmymitlavigne/PinkRules/master/quantumult/news-bilingual/NewsBilingual.js
+^https:\/\/(?:(?:www\.)?(?:wsj\.com|nytimes\.com|economist\.com)|(?:www\.|app\.)?ft\.com)(?::443)?\/(?!__news_bilingual__\/)(?!_origami\/service\/image\/)(?!_next\/|assets?\/|static\/|images?\/|fonts?\/|videos?\/)(?![^?#]*\.(?:avif|bmp|css|gif|ico|jpe?g|js|m4a|m4v|mov|mp3|mp4|m3u8|pdf|png|svg|ttf|webm|webp|woff2?)(?:[?#]|$)) url script-response-body https://raw.githubusercontent.com/jimmymitlavigne/PinkRules/master/quantumult/news-bilingual/NewsBilingual.js
