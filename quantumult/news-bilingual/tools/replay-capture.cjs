@@ -12,8 +12,10 @@ async function main() {
   const rules = fs.readFileSync(path.join(__dirname, '../NewsBilingual.snippet'), 'utf8').split('\n')
     .filter(line => line.includes(' url script-response-body ')).map(line => new RegExp(line.split(' url ')[0]));
   const report = {records: 0, ftImageRequests: 0, ftImageMatches: 0, nytArticles: 0, nytNonArticles: 0, nytEmptyResponses: 0,
-    rewritten: 0, browserPages: 0, translatedParagraphs: 0, externalRequestsSent: 0};
+    ftStartup: 0, ftStructured: 0, wsjWebview: 0, wsjStructured: 0, economistResponses: 0, economistArticles: 0,
+    decodeErrors: [], rewritten: 0, browserPages: 0, translatedParagraphs: 0, externalRequestsSent: 0};
   const articles = [];
+  let ftStartupCode, ftExample;
   for (const entry of fs.readdirSync(root, {withFileTypes: true})) {
     if (!entry.isDirectory() || !/^\d+$/.test(entry.name)) continue;
     const dir = path.join(root, entry.name);
@@ -23,6 +25,39 @@ async function main() {
     if (u.hostname === 'www.ft.com' && u.pathname.startsWith('/__origami/service/image/')) {
       report.ftImageRequests++;
       if (rules.some(r => r.test(url))) report.ftImageMatches++;
+    }
+    const ftStartup = u.hostname === 'app-api.ft.com' && u.pathname === '/startupcheck';
+    const ftArticle = u.hostname === 'app-api.ft.com' && u.pathname.startsWith('/__content/v6/article/');
+    const wsjPage = u.hostname === 'webview.wsj.com' && u.pathname.startsWith('/webview/');
+    const wsjArticle = u.hostname === 'shared-data.dowjones.io' && u.searchParams.get('operationName') === 'ArticleContent';
+    const economist = u.hostname === 'api.economist.com' && u.searchParams.get('operationName') === 'ArticlesQuery';
+    if (ftStartup || ftArticle || wsjPage || wsjArticle || economist) {
+      let r;
+      try { r = readRecord(dir); } catch (e) { report.decodeErrors.push({id: entry.name, error: e.message}); continue; }
+      assert.ok(rules.some(rule => rule.test(url)), 'App route must match subscription: ' + entry.name);
+      const response = {statusCode: r.statusCode, headers: r.headers, body: r.body.toString()};
+      const request = {url, method: ftStartup ? 'POST' : 'GET'};
+      const result = await execute(request, response);
+      if (wsjPage) {
+        assert.ok(result.body?.includes('id="news-bilingual-loader"'));
+        assert.equal(result.body.replace(/<script id="news-bilingual-loader"[^>]*><\/script>/, ''), response.body);
+        articles.push({id: entry.name, url, html: result.body}); report.wsjWebview++; report.rewritten++;
+      } else if (ftStartup) {
+        const before = JSON.parse(response.body), after = JSON.parse(result.body);
+        assert.ok(after.executeJavascript.startsWith(before.executeJavascript));
+        ftStartupCode = after.executeJavascript.slice(before.executeJavascript.length);
+        after.executeJavascript = before.executeJavascript;
+        assert.deepEqual(after, before);
+        assert.deepEqual(await execute(request, {...response, body: result.body}), {});
+        report.ftStartup++; report.rewritten++;
+      } else {
+        assert.deepEqual(result, {}, 'Structured body must be returned unchanged');
+        const data = JSON.parse(response.body).data;
+        if (ftArticle) { report.ftStructured++; ftExample ||= data.content; }
+        if (wsjArticle) report.wsjStructured++;
+        if (economist) { report.economistResponses++; report.economistArticles += data.findArticles.length; }
+      }
+      continue;
     }
     if (u.hostname !== 'samizdat-graphql.nytimes.com' || u.searchParams.get('operationName') !== 'Asset') continue;
     const record = readRecord(dir);
@@ -49,6 +84,14 @@ async function main() {
     articles.push({id: entry.name, url: work.url, html});
   }
   assert.equal(report.ftImageMatches, 0, 'FT image requests must not invoke the script');
+  if (ftStartupCode && ftExample) {
+    // FT source paragraphs in a reconstructed DOM, not a claim of running its app.
+    const escape = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    const text = n => n.type === 'text' ? n.value : (n.children || []).map(text).join('');
+    const paragraphs = ftExample.body.structured.tree.children.filter(n => n.type === 'paragraph').map(n => '<p>' + escape(text(n)) + '</p>').join('');
+    articles.push({id: 'FT-reconstructed', url: 'https://app.ft.com/content/replay',
+      html: '<!doctype html><html><body><article class="n-content-body">' + paragraphs + '</article><script id="news-bilingual-loader-test">' + ftStartupCode + '</script></body></html>', ftHook: true});
+  }
   if (process.argv.includes('--browser')) {
     const {chromium} = require('playwright');
     const browser = await chromium.launch({headless: true,
@@ -62,13 +105,14 @@ async function main() {
         page.on('pageerror', error => errors.push(error.message));
         // Publisher scripts and event handlers are not executed in this offline DOM replay.
         const html = article.html.replace(/<script\b[^>]*>[\s\S]*?<\/script\s*>/gi, tag =>
-          tag.includes('id="news-bilingual-loader"') ? tag.replace('<script ', '<script nonce="replay-only" ') : '');
+          (tag.includes('id="news-bilingual-loader"') || article.ftHook && tag.includes('id="news-bilingual-loader-test"')) ? tag.replace('<script ', '<script nonce="replay-only" ') : '');
+        const apiOrigin = new URL(article.url).origin;
         await ctx.route('**/*', async route => {
           const req = route.request(), u = new URL(req.url());
           if (req.isNavigationRequest() && req.url() === article.url) {
             await route.fulfill({status: 200, headers: {'Content-Type': 'text/html',
-              'Content-Security-Policy': "default-src 'none'; script-src 'nonce-replay-only'; style-src 'unsafe-inline'; connect-src https://www.nytimes.com; img-src data:"}, body: html});
-          } else if (u.origin === 'https://www.nytimes.com' && u.pathname.startsWith(prefix)) {
+              'Content-Security-Policy': "default-src 'none'; script-src 'nonce-replay-only' 'self'; style-src 'unsafe-inline'; connect-src " + apiOrigin + "; img-src data:"}, body: html});
+          } else if (u.origin === apiOrigin && u.pathname.startsWith(prefix)) {
             if (u.pathname.endsWith('client.js')) clientCalls++;
             if (u.pathname.endsWith('translate')) translationCalls++;
             const result = await execute({url: req.url(), method: req.method(), headers: await req.allHeaders(), body: req.postData() || ''},

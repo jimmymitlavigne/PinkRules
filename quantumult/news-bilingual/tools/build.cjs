@@ -14,13 +14,18 @@ const bundle = banner + '(function () {\nvar LOCAL_CONFIG = ' + JSON.stringify(d
   fs.readFileSync(path.join(root, 'src/browser.js'), 'utf8') + '\n' + core + '\n})();\n';
 fs.writeFileSync(path.join(root, 'NewsBilingual.js'), bundle);
 function snippet(script) {
-  const domain = '^https:\\/\\/(?:(?:www\\.)?(?:wsj\\.com|nytimes\\.com|economist\\.com)|(?:www\\.|app\\.)?ft\\.com)(?::443)?';
-  return '#!name=NewsBilingual 新闻双语（HTML / WebView）\n#!desc=点击双语；Google / DeepL / Gemini / DeepSeek。支持 NYT App GraphQL 正文。\n#!version=' + version + '\n' +
-    'hostname = wsj.com, www.wsj.com, nytimes.com, www.nytimes.com, samizdat-graphql.nytimes.com, ft.com, www.ft.com, app.ft.com, economist.com, www.economist.com\n\n' +
+  const domain = '^https:\\/\\/(?:(?:www\\.|webview\\.)?wsj\\.com|(?:www\\.)?(?:nytimes\\.com|economist\\.com)|(?:www\\.|app\\.)?ft\\.com)(?::443)?';
+  return '#!name=NewsBilingual 新闻双语（HTML / WebView）\n#!desc=按需双语；NYT HTML、FT 启动入口、WSJ WebView。WSJ 原生正文与经济学人 App 仅诊断，尚不支持按钮。\n#!version=' + version + '\n' +
+    'hostname = wsj.com, www.wsj.com, webview.wsj.com, nytimes.com, www.nytimes.com, samizdat-graphql.nytimes.com, ft.com, www.ft.com, app.ft.com, app-api.ft.com, economist.com, www.economist.com, api.economist.com, shared-data.dowjones.io\n\n' +
     domain + '\\/__news_bilingual__\\/v2\\/translate(?:\\?.*)?$ url script-analyze-echo-response ' + script + '\n' +
     domain + '\\/__news_bilingual__\\/v2\\/(?:client\\.js|status|diagnostic)(?:\\?.*)?$ url script-echo-response ' + script + '\n' +
     '^https:\\/\\/samizdat-graphql\\.nytimes\\.com(?::443)?\\/graphql\\/v2\\?(?:[^#]*&)?operationName=Asset(?:&[^#]*)?$ url script-response-body ' + script + '\n' +
-    domain + '\\/(?!__news_bilingual__\\/)(?!_{1,2}origami\\/service\\/image\\/)(?!_next\\/|vi-assets\\/|assets?\\/|static\\/|images?\\/|fonts?\\/|videos?\\/)(?![^?#]*\\.(?:avif|bmp|css|gif|ico|jpe?g|js|m4a|m4v|mov|mp3|mp4|m3u8|pdf|png|svg|ttf|webm|webp|woff2?)(?:[?#]|$)) url script-response-body ' + script + '\n';
+    domain + '\\/(?!__news_bilingual__\\/)(?!_{1,2}origami\\/service\\/image\\/)(?!_next\\/|vi-assets\\/|assets?\\/|static\\/|images?\\/|fonts?\\/|videos?\\/)(?![^?#]*\\.(?:avif|bmp|css|gif|ico|jpe?g|js|m4a|m4v|mov|mp3|mp4|m3u8|pdf|png|svg|ttf|webm|webp|woff2?)(?:[?#]|$)) url script-response-body ' + script + '\n' +
+    '^https:\\/\\/app-api\\.ft\\.com(?::443)?\\/startupcheck(?:\\?.*)?$ url script-response-body ' + script + '\n' +
+    '# Structured article responses: diagnostics only; bodies are passed through unchanged.\n' +
+    '^https:\\/\\/app-api\\.ft\\.com(?::443)?\\/__content\\/v6\\/article\\/[0-9a-f-]+(?:\\?.*)?$ url script-response-body ' + script + '\n' +
+    '^https:\\/\\/shared-data\\.dowjones\\.io(?::443)?\\/gateway\\/graphql\\?(?:[^#]*&)?operationName=ArticleContent(?:&[^#]*)?$ url script-response-body ' + script + '\n' +
+    '^https:\\/\\/api\\.economist\\.com(?::443)?\\/teg\\/content\\/b2c-mobile\\/cp2-gateway\\/graphql\\?(?:[^#]*&)?operationName=ArticlesQuery(?:&[^#]*)?$ url script-response-body ' + script + '\n';
 }
 fs.writeFileSync(path.join(root, 'NewsBilingual.snippet'), snippet('NewsBilingual.js'));
 const base = process.argv[2];

@@ -19,10 +19,12 @@ function browserMain(config) {
   box.appendChild(button); box.appendChild(status); shadow.appendChild(style); shadow.appendChild(box);
   (document.body || document.documentElement).appendChild(host);
 
-  function pageId() { return location.origin + location.pathname + location.search; }
+  function pageId() { return location.origin + location.pathname + location.search + location.hash; }
   function textOf(node) { return (node.textContent || '').replace(/\s+/g, ' ').trim(); }
   function candidates(node) {
+    var wsjParagraphs = /(^|\.)wsj\.com$/.test(location.hostname) && node.querySelector('p[data-type="paragraph"]');
     return Array.prototype.filter.call(node.querySelectorAll('p,h2,h3'), function (p) {
+      if (wsjParagraphs && p.tagName === 'P' && p.getAttribute('data-type') !== 'paragraph') return false;
       if (p.closest('nav,aside,footer,form,figure,[hidden],[aria-hidden="true"],[' + marker + ']')) return false;
       var text = textOf(p);
       if (!text || !/[A-Za-z]/.test(text) || !p.getClientRects().length) return false;
@@ -34,7 +36,7 @@ function browserMain(config) {
   }
   function findRoot() {
     var selectors = ['[itemprop="articleBody"]', 'section[name="articleBody"]', '[data-testid="article-body"]',
-      '[data-testid="story-body"]', '[data-testid="BodyWrapper"]', '#article-body', '.article__content-body', '.article-body', 'article'];
+      '[data-testid="story-body"]', '[data-testid="BodyWrapper"]', '#article-body', '.n-content-body', '.article--body', '.article__content-body', '.article-body', 'article'];
     // main alone is insufficient: homepages also have paragraphs.
     if (document.querySelector('meta[property="og:type"][content="article"]')) selectors.push('main');
     for (var i = 0; i < selectors.length; i++) {

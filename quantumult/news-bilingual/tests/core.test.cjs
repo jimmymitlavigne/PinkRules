@@ -26,7 +26,7 @@ test('NYT App Asset GraphQL response receives one loader inside hybrid HTML', as
   const result = await execute({url, method: 'GET'}, response);
   const parsed = JSON.parse(result.body);
   assert.match(parsed.data.anyWork.hybridBody.main.contents,
-    /<script id="news-bilingual-loader" src="https:\/\/www\.nytimes\.com\/__news_bilingual__\/v2\/client\.js\?v=0\.3\.1" defer><\/script>/);
+    /<script id="news-bilingual-loader" src="https:\/\/www\.nytimes\.com\/__news_bilingual__\/v2\/client\.js\?v=0\.4\.0" defer><\/script>/);
   assert.ok(parsed.data.anyWork.hybridBody.main.contents.includes('Native app hybrid article text.'));
   assert.deepEqual(await execute({url, method: 'GET'}, {...response, body: result.body}), {});
   assert.deepEqual(await execute({url: url.replace('Asset', 'SectionFront'), method: 'GET'}, response), {});
@@ -40,7 +40,7 @@ test('NYT App Asset GraphQL response receives one loader inside hybrid HTML', as
 test('diagnostic state distinguishes injection, client load and provider errors without article text or keys', async () => {
   const prefs = {...keys};
   await execute(page, response, undefined, prefs);
-  await execute({url: origin + prefix + 'client.js?v=0.3.1', method: 'GET'}, undefined, undefined, prefs);
+  await execute({url: origin + prefix + 'client.js?v=0.4.0', method: 'GET'}, undefined, undefined, prefs);
   await execute(request(['PRIVATE_ARTICLE_CONTENT']), undefined, async () => json({}, 429), prefs);
   const status = await execute({url: origin + prefix + 'status', method: 'GET'}, undefined, undefined, prefs);
   const recent = JSON.parse(status.body).recent;
@@ -130,8 +130,8 @@ test('snippet endpoints match each supported host and all use one JS', () => {
   const rules = text.split('\n').filter(s => s.startsWith('^')).map(s => {
     const [pattern, operation] = s.split(' url '); return {regex: new RegExp(pattern), operation};
   });
-  assert.equal(rules.length, 4);
-  for (const host of ['www.wsj.com', 'www.nytimes.com', 'www.ft.com', 'app.ft.com', 'www.economist.com']) {
+  assert.equal(rules.length, 8);
+  for (const host of ['www.wsj.com', 'webview.wsj.com', 'www.nytimes.com', 'www.ft.com', 'app.ft.com', 'www.economist.com']) {
     assert.ok(rules[0].regex.test('https://' + host + prefix + 'translate'));
     assert.ok(rules[1].regex.test('https://' + host + prefix + 'client.js'));
     assert.ok(rules[1].regex.test('https://' + host + prefix + 'diagnostic'));
@@ -150,4 +150,46 @@ test('snippet endpoints match each supported host and all use one JS', () => {
   assert.equal(new Set(scripts).size, 1);
   assert.ok(scripts.every(s => /(?:^|\/)NewsBilingual\.js(?:\?v=[\d.]+)?$/.test(s)));
   assert.ok(rules.every(r => !r.regex.test('https://ft.com.evil.test/content/example')));
+});
+
+test('FT startup hook preserves existing code and subscription fields, with exact route and method', async () => {
+  const url = 'https://app-api.ft.com/startupcheck?client=ios';
+  const payload = {executeJavascript: 'window.ftOriginalRan = true;', level: 'unchanged', entitlements: ['original'], account: {active: true}};
+  const response = {statusCode: 200, headers: {'content-type': 'application/json'}, body: JSON.stringify(payload)};
+  const result = await execute({url, method: 'POST'}, response, undefined, keys);
+  const output = JSON.parse(result.body);
+  assert.ok(output.executeJavascript.startsWith(payload.executeJavascript + '\n;'));
+  assert.match(output.executeJavascript, /NewsBilingual FT bootstrap/);
+  assert.doesNotMatch(output.executeJavascript, /SECRET/);
+  const vm = require('node:vm');
+  const scripts = [], window = {}; window.top = window;
+  const document = {readyState: 'complete', getElementById: () => scripts[0], createElement: () => ({}), head: {appendChild: s => scripts.push(s)}};
+  const context = {window, document, location: {origin: 'https://app.ft.com'}};
+  vm.runInNewContext(output.executeJavascript, context);
+  vm.runInNewContext(output.executeJavascript, context);
+  assert.equal(window.ftOriginalRan, true);
+  assert.equal(scripts.length, 1);
+  assert.match(scripts[0].src, /client\.js\?v=0\.4\.0$/);
+  output.executeJavascript = payload.executeJavascript;
+  assert.deepEqual(output, payload);
+  assert.deepEqual(await execute({url, method: 'POST'}, {...response, body: result.body}), {});
+  assert.deepEqual(await execute({url, method: 'GET'}, response), {});
+  assert.deepEqual(await execute({url: 'https://app-api.ft.com/check-payment', method: 'POST'}, response), {});
+  for (const value of [undefined, null, {}, 123]) {
+    assert.deepEqual(await execute({url, method: 'POST'}, {...response, body: JSON.stringify({executeJavascript: value})}), {});
+  }
+});
+test('structured FT, WSJ and Economist bodies remain untouched and diagnostics contain no article text', async () => {
+  const cases = [
+    ['https://app-api.ft.com/__content/v6/article/123', {content: {body: {structured: {tree: {value: 'PRIVATE'}}}}}, 'ft'],
+    ['https://shared-data.dowjones.io/gateway/graphql?operationName=ArticleContent', {articleContent: {articleBody: [{text: 'PRIVATE'}]}}, 'wsj'],
+    ['https://api.economist.com/teg/content/b2c-mobile/cp2-gateway/graphql?operationName=ArticlesQuery', {findArticles: [{body: [{text: 'PRIVATE'}]}]}, 'economist']
+  ];
+  for (const [url, data, publisher] of cases) {
+    const prefs = {};
+    assert.deepEqual(await execute({url, method: 'GET'}, {statusCode: 200, headers: {'content-type': 'application/json'}, body: JSON.stringify({data})}, undefined, prefs), {});
+    const result = await execute({url: origin + prefix + 'status', method: 'GET'}, undefined, undefined, prefs);
+    assert.equal(JSON.parse(result.body).apps[publisher].state, 'structured');
+    assert.doesNotMatch(result.body, /PRIVATE/);
+  }
 });

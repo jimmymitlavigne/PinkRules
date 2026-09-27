@@ -114,6 +114,15 @@ function fixture(body = article) {
     await page.getByRole('button', {name: '显示双语', exact: true}).waitFor({state: 'hidden'});
     await page.evaluate(() => document.querySelector('article').hidden = false);
     await page.getByRole('button', {name: '显示双语', exact: true}).waitFor({state: 'visible'});
+    // Second click during a pending translation must cancel further batches and ignore its late result.
+    delay = 600;
+    await page.getByRole('button', {name: '显示双语', exact: true}).click();
+    await page.getByRole('button', {name: '显示原文', exact: true}).click();
+    const stoppedCalls = bridgeCalls;
+    await page.waitForTimeout(900); delay = 0;
+    assert.equal(bridgeCalls, stoppedCalls);
+    assert.equal(await page.locator('[data-news-bilingual-translation]:visible').count(), 0);
+    await page.getByRole('button', {name: '显示双语', exact: true}).waitFor({state: 'visible'});
     await page.goto('https://www.ft.com/home');
     await page.waitForTimeout(300);
     assert.equal(await page.getByRole('button', {name: '显示双语', exact: true}).isVisible(), false);
