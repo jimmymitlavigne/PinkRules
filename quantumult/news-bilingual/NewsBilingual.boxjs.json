@@ -10,6 +10,7 @@
       ],
       "keys": [
         "NewsBilingual.provider",
+        "NewsBilingual.removeAds",
         "NewsBilingual.deeplKey",
         "NewsBilingual.deeplApiHost",
         "NewsBilingual.geminiKey",
@@ -40,6 +41,23 @@
             {
               "key": "deepseek",
               "label": "deepseek"
+            }
+          ]
+        },
+        {
+          "id": "NewsBilingual.removeAds",
+          "name": "隐藏正文广告",
+          "type": "selects",
+          "val": "true",
+          "desc": "仅作用于已加载客户端的 HTML/WebView 正文；修改后重新打开文章。",
+          "items": [
+            {
+              "key": "true",
+              "label": "开启"
+            },
+            {
+              "key": "false",
+              "label": "关闭"
             }
           ]
         },
