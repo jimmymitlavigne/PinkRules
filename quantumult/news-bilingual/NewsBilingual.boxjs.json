@@ -12,6 +12,7 @@
         "NewsBilingual.provider",
         "NewsBilingual.removeAds",
         "NewsBilingual.cleanAdResponses",
+        "NewsBilingual.economistWebView",
         "NewsBilingual.deeplKey",
         "NewsBilingual.deeplApiHost",
         "NewsBilingual.geminiKey",
@@ -68,6 +69,23 @@
           "type": "selects",
           "val": "true",
           "desc": "会影响其他应用的相同广告接口。",
+          "items": [
+            {
+              "key": "true",
+              "label": "开启"
+            },
+            {
+              "key": "false",
+              "label": "关闭"
+            }
+          ]
+        },
+        {
+          "id": "NewsBilingual.economistWebView",
+          "name": "经济学人 WebView 入口（实验性）",
+          "type": "selects",
+          "val": "true",
+          "desc": "尝试启用 App 响应中的 forceAppWebView；真机待验证。页面打不开时关闭并重开文章。",
           "items": [
             {
               "key": "true",
