@@ -11,6 +11,7 @@
       "keys": [
         "NewsBilingual.provider",
         "NewsBilingual.removeAds",
+        "NewsBilingual.cleanAdResponses",
         "NewsBilingual.deeplKey",
         "NewsBilingual.deeplApiHost",
         "NewsBilingual.geminiKey",
@@ -50,6 +51,23 @@
           "type": "selects",
           "val": "true",
           "desc": "仅作用于已加载客户端的 HTML/WebView 正文；修改后重新打开文章。",
+          "items": [
+            {
+              "key": "true",
+              "label": "开启"
+            },
+            {
+              "key": "false",
+              "label": "关闭"
+            }
+          ]
+        },
+        {
+          "id": "NewsBilingual.cleanAdResponses",
+          "name": "清理广告投放响应",
+          "type": "selects",
+          "val": "true",
+          "desc": "会影响其他应用的相同广告接口。",
           "items": [
             {
               "key": "true",
