@@ -10,6 +10,7 @@
       ],
       "keys": [
         "NewsBilingual.provider",
+        "NewsBilingual.translationCache",
         "NewsBilingual.removeAds",
         "NewsBilingual.cleanAdResponses",
         "NewsBilingual.economistWebView",
@@ -43,6 +44,23 @@
             {
               "key": "deepseek",
               "label": "deepseek"
+            }
+          ]
+        },
+        {
+          "id": "NewsBilingual.translationCache",
+          "name": "本地持久翻译缓存",
+          "type": "selects",
+          "val": "true",
+          "desc": "QX 本机保存原文片段和译文，30 天有效；可在诊断设置页清除。",
+          "items": [
+            {
+              "key": "true",
+              "label": "开启"
+            },
+            {
+              "key": "false",
+              "label": "关闭"
             }
           ]
         },
