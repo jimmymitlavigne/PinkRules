@@ -1,4 +1,4 @@
-# NewsBilingual 0.7.0
+# NewsBilingual 0.7.1
 
 Quantumult X 新闻双语与正文广告隐藏。默认 Google 翻译，可配置 DeepL、Gemini、DeepSeek。
 
@@ -10,7 +10,17 @@ https://raw.githubusercontent.com/jimmymitlavigne/PinkRules/master/quantumult/ne
 
 只需导入这一个链接；必需的 JS 会通过订阅自动加载。启用重写与 MitM，安装并信任 QX 证书，使用订阅中的 hostname。避免同时启用重复版本。
 
-更新后确认版本为 **0.7.0**，完全退出再打开新闻 App。FT 需要重新触发启动请求。更新前保存的旧文章若没有按钮，需要让 App 重新联网载入该文章；仅退出重开不一定会更新离线缓存。
+更新后确认版本为 **0.7.1**，完全退出再打开新闻 App。FT 需要重新触发启动请求。更新前保存的旧文章若没有按钮，需要让 App 重新联网载入该文章；仅退出重开不一定会更新离线缓存。
+
+## 0.7.1：经济学人阅读主题与按钮诊断
+
+- 默认保留经济学人原生阅读器，不再将 `forceAppWebView=false` 自动改成 true。旧版为了尝试添加按钮而切换阅读器，可能导致原生深色模式或登录体验丢失；这是明确存在的行为风险，但现有抓包没有失败页面的 HTML，不能断言每篇异常的唯一原因。
+- 原设置 `economistWebView` 不再继承，新设置 `economistForceWebView` 默认关闭。需要尝试时，在诊断页手动开启“强制经济学人网页阅读器”；该选项可能再次失去原生主题。已被旧版改写并缓存在 App 的文章仍需重新联网加载，更新脚本无法追溯修改离线文件。
+- 译文移除固定浅色底，使用透明背景，文字颜色跟随对应原文段落；系统主题或页面主题改变时更新。只改变译文自己的样式，不覆盖原站正文、背景、图片或主题设置。
+- 经济学人已有 HTML/WebView 正文内嵌客户端，并保留外链后备与 CSP nonce；不修改 CSP。减少单独 `client.js` 加载失败导致没有按钮的情况。若 App 使用原生组件渲染结构化 JSON，仍无按钮注入入口。
+- 诊断页分别记录“经济学人正文入口 / WebView 注入 / 外链脚本返回 / 按钮运行状态”。原生结构化正文、HTML 已注入、客户端已找到正文是不同阶段；需结合当前文章打开后的时间判断。
+
+提供的 293 条记录中，31 条 GraphQL 响应在默认配置下全部保持原样；其中有 20 份文章正文数据。`www.economist.com` 的 61 条记录均为图片请求，缺少文章 HTML，不能逐篇复现本次有/无按钮及深色模式问题。本地人工页面已验证主题切换、内嵌启动与独立运行记录，手机仍待复测。**本次没有实现经济学人全部原生文章的翻译按钮。**
 
 ## 0.7.0：跨页面的本地持久翻译缓存
 
@@ -57,7 +67,7 @@ https://raw.githubusercontent.com/jimmymitlavigne/PinkRules/master/quantumult/ne
 
 ## 0.6.0：经济学人实验性适配
 
-根据新抓包加入 `ArticleQuery` 单篇正文、`ArticlesQuery` 批量正文、首页和专题列表适配。仅将已识别文章的 `contentIdentity.forceAppWebView` 从 false 改为 true，尝试让 App 使用自身的网页正文入口，再由 HTML 重写加载翻译按钮。默认开启，可在诊断设置页关闭“经济学人 WebView 入口（实验性）”。
+历史版本根据抓包加入 `ArticleQuery` 单篇正文、`ArticlesQuery` 批量正文、首页和专题列表适配。仅将已识别文章的 `contentIdentity.forceAppWebView` 从 false 改为 true，尝试让 App 使用自身的网页正文入口，再由 HTML 重写加载翻译按钮。**0.7.1 起默认关闭且不继承旧开关，详见上方说明。**
 
 **这个字段已在真实响应中验证存在，但 App 是否实际切换、是否沿用登录状态及按钮能否显示仍待 iPhone 实测。** 不将“已请求 WebView”当作按钮加载成功。若出现登录提示、页面打不开或阅读异常，请关闭该开关后重开文章；已有缓存可能需要重新联网加载。正文、图片、音频、文章 URL、权限字段与广告标签均保留。
 
@@ -79,7 +89,7 @@ https://raw.githubusercontent.com/jimmymitlavigne/PinkRules/master/quantumult/ne
 | NYT App | HTML 正文已接入按钮及广告隐藏；待 iPhone 实测。 |
 | FT App | 通过启动脚本入口加载客户端，在文章 DOM 隐藏广告和提供按钮；待 iPhone 实测。 |
 | WSJ App | WebView 文章已接入；原生正文按钮未实现；匹配到的通用广告响应可清理，空位不保证消失。 |
-| 经济学人 App | 实验性请求 App 切换 WebView 后提供按钮；尚未真机确认。匹配到的通用广告响应可清理，原生空位不保证消失。 |
+| 经济学人 App | 默认保留原生阅读器；已有 HTML/WebView 提供按钮。强制网页入口需手动开启，可能丢失原生主题；全部原生文章按钮未实现。匹配到的广告响应可清理，原生空位不保证消失。 |
 
 **尚未实现四款 App 全部正文支持。** 页面广告隐藏作用于 HTML/WebView；新增的响应清理可处理匹配接口的原生广告数据。未知广告格式、缓存广告及原生控件的占位仍可能保留。离线浏览器检查使用模拟翻译；FT 使用重建 DOM，不能替代最新版 iPhone App 实测。
 

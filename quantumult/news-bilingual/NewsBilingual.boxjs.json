@@ -13,7 +13,7 @@
         "NewsBilingual.translationCache",
         "NewsBilingual.removeAds",
         "NewsBilingual.cleanAdResponses",
-        "NewsBilingual.economistWebView",
+        "NewsBilingual.economistForceWebView",
         "NewsBilingual.deeplKey",
         "NewsBilingual.deeplApiHost",
         "NewsBilingual.geminiKey",
@@ -99,11 +99,11 @@
           ]
         },
         {
-          "id": "NewsBilingual.economistWebView",
-          "name": "经济学人 WebView 入口（实验性）",
+          "id": "NewsBilingual.economistForceWebView",
+          "name": "强制经济学人网页阅读器（实验性）",
           "type": "selects",
-          "val": "true",
-          "desc": "尝试启用 App 响应中的 forceAppWebView；真机待验证。页面打不开时关闭并重开文章。",
+          "val": "false",
+          "desc": "默认关闭；开启可能失去原生深色模式。旧版开关不继承，需重新选择。",
           "items": [
             {
               "key": "true",
