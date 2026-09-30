@@ -1,4 +1,4 @@
-# NewsBilingual 0.8.2
+# NewsBilingual 0.8.3
 
 Quantumult X 新闻双语与正文广告隐藏。默认 Google 翻译，可配置 DeepL、Gemini、DeepSeek。
 
@@ -10,7 +10,23 @@ https://raw.githubusercontent.com/jimmymitlavigne/PinkRules/master/quantumult/ne
 
 网页/WebView 功能只需导入这一个链接；JS 会通过订阅自动加载。**经济学人后台原生双语还需添加下面的 QX 定时任务，仍使用同一个 JS。** 启用重写与 MitM，安装并信任 QX 证书，使用订阅中的 hostname。避免同时启用重复版本。
 
-更新后确认版本为 **0.8.2**，完全退出再打开新闻 App。FT 需要重新触发启动请求。更新前保存的旧文章若没有按钮，需要让 App 重新联网载入该文章；仅退出重开不一定会更新离线缓存。
+更新后确认版本为 **0.8.3**，完全退出再打开新闻 App。FT 需要重新触发启动请求。更新前保存的旧文章若没有按钮，需要让 App 重新联网载入该文章；仅退出重开不一定会更新离线缓存。
+
+## 0.8.3：补充 WSJ 列表阅读器入口（需要手机验证）
+
+用户的 0.8.2 日志只有当前 `ArticleContent` 结构化正文，网页注入是旧版记录，当前客户端没有执行回报。因此此前页面脚本修复并没有覆盖这次阅读路径，不能把“正文接口已命中”当成按钮成功。
+
+重新检查抓包：已打开的 7 份原生正文都能在文章列表或相关推荐中找到 `isWebView: false`、`articleWebViewLink: null` 的入口。旧规则没有覆盖 `SummaryCollectionContentV2` / `BundledRecommendedArticles`。注意，单独 `isWebView: false` 不足以判断原生阅读；包内也有 false 但带有效网页地址、随后载入 WebView 的文章。
+
+新版默认开启“WSJ 优先网页阅读（实验性）”，在这两种已观察列表格式中，对符合 WSJ 品牌与文章格式的条目设置网页阅读偏好。优先使用服务端已有的 `articleWebViewLink`；为 null 时使用原条目的 WSJ 官网 `sourceUrl`。不根据文章 ID 猜测网页地址，抽查的此类推导地址返回 404。文章官网回退可能要求网页登录，App 订阅登录不保证与官网互通；未验证 iPhone 是否接受这些字段的改写。
+
+只改变合格条目的 `isWebView` 与 `articleWebViewLink`，链接增加当前版本参数请求新页面；文章标识、正文、原始 sourceUrl、订阅权限及其他字段完整保留。已为网页阅读的特殊卡片、未知品牌、外站和异常链接不改写。WSJ 官网 HTML 也加入与专用 WebView 相同的内嵌启动和外链后备。原有液体玻璃图标、双语切换、缓存、正文广告折叠继续使用。
+
+**必须刷新完整重写订阅，再下拉刷新 WSJ 新闻列表，然后从刷新后的列表打开文章。只更新 JS、只重启 App 或打开已下载文章，可能仍走旧入口。** 本地管理页可关闭该选项；关闭后同样需要重新联网刷新列表。未更改系统原生 UI，QX 无法凭空在 UIKit 阅读器中添加按钮，也不能追溯修改完全离线缓存。
+
+诊断新增“WSJ 列表阅读器选择”，显示专用网页/官网的改写条目数（预载列表可能重复，不是唯一文章数）。该项成功只表示响应已改写；仍需当前版本的“WSJ 客户端执行”和“WSJ 按钮运行状态”来判断实际启动。如果官网显示登录或拒绝访问，可关闭此选项恢复原生阅读。
+
+验证：46 项单元通过；本机重放 37 个列表/推荐响应，改写 1,123 个条目（253 个已有专用地址、870 个官网回退），抓包 7 份原生文章均匹配到新的列表入口。除两项阅读字段外整个 JSON 逐项相等；关闭开关时响应原样返回。Chrome 两个 WSJ 域名的 6 种启动/翻译切换组合通过；WebKit 实际正文回放按钮、13 段模拟翻译、缓存切换和按钮恢复通过；管理开关保存/重载及密钥隔离通过。所有翻译与回放网络为模拟，未执行原站 App 框架或桥接。**这些验证不等于真实 iPhone 路由、官网登录和翻译服务已经验证，不能承诺所有文章已恢复。**
 
 ## 0.8.2：WSJ App 页面脚本启动与缓存更新
 
@@ -49,7 +65,7 @@ NYT 的入口是文章 JSON 内的 `hybridBody.main.contents`；FT 使用启动�
 刷新重写订阅后，将以下一行加入 QX 配置的 **`[task_local]`** 段，添加一次即可。它是任务配置，不能作为重写引用导入：
 
 ```ini
-* * * * * https://raw.githubusercontent.com/jimmymitlavigne/PinkRules/master/quantumult/news-bilingual/NewsBilingual.js?v=0.8.2, tag=NewsBilingual Economist Native, enabled=true
+* * * * * https://raw.githubusercontent.com/jimmymitlavigne/PinkRules/master/quantumult/news-bilingual/NewsBilingual.js?v=0.8.3, tag=NewsBilingual Economist Native, enabled=true
 ```
 
 也可查看同内容的 [NewsBilingual.task.txt](https://raw.githubusercontent.com/jimmymitlavigne/PinkRules/master/quantumult/news-bilingual/NewsBilingual.task.txt)。此用法依据 [QX 官方任务配置示例](https://github.com/crossutility/Quantumult-X/blob/master/sample.conf)，同一个 JS 在重写与定时任务中分别运行。仅刷新重写不会自动安装定时任务。

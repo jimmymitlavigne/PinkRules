@@ -10,6 +10,7 @@
       ],
       "keys": [
         "NewsBilingual.provider",
+        "NewsBilingual.wsjPreferWebView",
         "NewsBilingual.translationCache",
         "NewsBilingual.removeAds",
         "NewsBilingual.cleanAdResponses",
@@ -46,6 +47,23 @@
             {
               "key": "deepseek",
               "label": "deepseek"
+            }
+          ]
+        },
+        {
+          "id": "NewsBilingual.wsjPreferWebView",
+          "name": "WSJ 优先网页阅读（实验性）",
+          "type": "selects",
+          "val": "true",
+          "desc": "默认开启。刷新新闻列表后请求 App 使用已有网页链接；无专用链接时回退文章官网，可能需要网页登录。关闭后刷新列表恢复原生选择。",
+          "items": [
+            {
+              "key": "true",
+              "label": "开启"
+            },
+            {
+              "key": "false",
+              "label": "关闭"
             }
           ]
         },
