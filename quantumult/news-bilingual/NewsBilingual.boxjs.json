@@ -14,6 +14,8 @@
         "NewsBilingual.removeAds",
         "NewsBilingual.cleanAdResponses",
         "NewsBilingual.economistForceWebView",
+        "NewsBilingual.economistNativeBilingual",
+        "NewsBilingual.economistNativeAuto",
         "NewsBilingual.deeplKey",
         "NewsBilingual.deeplApiHost",
         "NewsBilingual.geminiKey",
@@ -104,6 +106,40 @@
           "type": "selects",
           "val": "false",
           "desc": "默认关闭；开启可能失去原生深色模式。旧版开关不继承，需重新选择。",
+          "items": [
+            {
+              "key": "true",
+              "label": "开启"
+            },
+            {
+              "key": "false",
+              "label": "关闭"
+            }
+          ]
+        },
+        {
+          "id": "NewsBilingual.economistNativeBilingual",
+          "name": "经济学人原生双语",
+          "type": "selects",
+          "val": "true",
+          "desc": "本机登记原生正文；译文准备好后由 App 渲染双语，保持原生主题。",
+          "items": [
+            {
+              "key": "true",
+              "label": "开启"
+            },
+            {
+              "key": "false",
+              "label": "关闭"
+            }
+          ]
+        },
+        {
+          "id": "NewsBilingual.economistNativeAuto",
+          "name": "经济学人后台自动翻译",
+          "type": "selects",
+          "val": "true",
+          "desc": "需要添加 QX 定时任务。每分钟依次处理一篇，完成后需实际联网重载正文。",
           "items": [
             {
               "key": "true",
