@@ -1,2 +1,2 @@
 # Add this line under [task_local], not in Rewrite subscriptions.
-* * * * * https://raw.githubusercontent.com/jimmymitlavigne/PinkRules/master/quantumult/news-bilingual/NewsBilingual.js?v=0.8.0, tag=NewsBilingual Economist Native, enabled=true
+* * * * * https://raw.githubusercontent.com/jimmymitlavigne/PinkRules/master/quantumult/news-bilingual/NewsBilingual.js?v=0.8.1, tag=NewsBilingual Economist Native, enabled=true
