@@ -1,4 +1,4 @@
-# NewsBilingual 0.8.4
+# NewsBilingual 0.8.5
 
 Quantumult X 新闻双语与正文广告隐藏。默认 Google 翻译，可配置 DeepL、Gemini、DeepSeek。
 
@@ -10,7 +10,22 @@ https://raw.githubusercontent.com/jimmymitlavigne/PinkRules/master/quantumult/ne
 
 网页/WebView 功能只需导入这一个链接；JS 会通过订阅自动加载。**经济学人后台原生双语还需添加下面的 QX 定时任务，仍使用同一个 JS。** 启用重写与 MitM，安装并信任 QX 证书，使用订阅中的 hostname。避免同时启用重复版本。
 
-更新后确认版本为 **0.8.4**，完全退出再打开新闻 App。FT 需要重新触发启动请求。更新前保存的旧文章若没有按钮，需要让 App 重新联网载入该文章；仅退出重开不一定会更新离线缓存。
+更新后确认版本为 **0.8.5**，完全退出再打开新闻 App。FT 需要重新触发启动请求。更新前保存的旧文章若没有按钮，需要让 App 重新联网载入该文章；仅退出重开不一定会更新离线缓存。
+
+## 0.8.5：WSJ 页面恢复与经济学人缓存/翻译进度
+
+沿用两个 App 原有阅读方式。本版解决已在抓包及本地回归中确认的缺口：
+
+- **WSJ 整页重建**：旧客户端监听的是旧 HTML 根节点。当 App 在相同地址替换整页、JavaScript 环境继续存在时，按钮可能不再恢复。改为监听 document，并在前台每 1.5 秒检查丢失的控件/正文；页面静止且正常时不重复扫描。沿用 0.8.4 的正文内挂载及裁切备用位置。
+- **WSJ 内嵌启动补全**：同版本加载标签存在、内嵌启动块缺失时，以前会直接跳过。现在补全所需启动代码，并保持只有一个本工具加载标签。
+- **完整正文请求**：已有两份经济学人 ArticlesQuery 返回 304 空体。[QX 官方示例](https://raw.githubusercontent.com/crossutility/Quantumult-X/master/sample.conf)说明正文重写不会在空体响应上执行。新增两个 `script-request-header` 规则，仅处理经济学人 ArticleQuery/ArticlesQuery、WSJ 专用正文和已识别的页面脚本，删除条件缓存验证头并要求重新请求正文。URL、Cookie、Authorization 及其他请求头保留，不触碰 Range 请求、媒体、账户和 WSJ 公钥接口。规则触发需要 App 实际发请求，仍不能修改完全离线缓存。
+- **经济学人队列**：重复预载已登记的整期文章时，保持现有队列位置和手动优先顺序，保留已有翻译进度。
+- **逐段保存 Google 结果**：某一并行段落失败或超时时，已经成功的段落立即保存，下轮仅请求缺失部分；原生文章的独立进度同步保存。清除缓存、任务结束后的迟到结果仍受保护。其他翻译服务继续按其批量返回结果保存。
+- **诊断**：增加两个 App 的“正文请求”记录；后台服务失败后的 5 分钟等待明确显示为等待重试。
+
+**更新时刷新完整重写订阅，确认 0.8.5（共 17 条规则）。经济学人已有定时任务请更新同一 JS 的版本参数为 0.8.5，保持只有一个任务；没有任务则需按下面说明添加。** 然后让 App 联网重新加载文章。后台完成译文后，经济学人原生正文仍需重新联网载入才能显示双语。
+
+验证：49 项单元通过。四项回归在旧版失败、新版通过；WSJ 实际正文的“静止后同地址整页替换”在 0.8.4 超时，新版 WebKit 可恢复一个 52×52 按钮并复用 13 段译文。22 个抓包请求命中新规则，含两份经济学人 304，请求凭据逐项保留。经济学人 76 篇/881 个普通段落离线重放，75 篇可翻译文章完成，其余内容/媒体/权限字段深比较一致。所有翻译均模拟，未执行原站 App 桥接，不能据此承诺真实 iPhone 的所有文章已稳定或服务网络已验证。
 
 ## 0.8.4：撤回 WSJ 网页跳转，恢复 App 内正文注入
 
@@ -66,7 +81,7 @@ NYT 的入口是文章 JSON 内的 `hybridBody.main.contents`；FT 使用启动�
 刷新重写订阅后，将以下一行加入 QX 配置的 **`[task_local]`** 段，添加一次即可。它是任务配置，不能作为重写引用导入：
 
 ```ini
-* * * * * https://raw.githubusercontent.com/jimmymitlavigne/PinkRules/master/quantumult/news-bilingual/NewsBilingual.js?v=0.8.4, tag=NewsBilingual Economist Native, enabled=true
+* * * * * https://raw.githubusercontent.com/jimmymitlavigne/PinkRules/master/quantumult/news-bilingual/NewsBilingual.js?v=0.8.5, tag=NewsBilingual Economist Native, enabled=true
 ```
 
 也可查看同内容的 [NewsBilingual.task.txt](https://raw.githubusercontent.com/jimmymitlavigne/PinkRules/master/quantumult/news-bilingual/NewsBilingual.task.txt)。此用法依据 [QX 官方任务配置示例](https://github.com/crossutility/Quantumult-X/blob/master/sample.conf)，同一个 JS 在重写与定时任务中分别运行。仅刷新重写不会自动安装定时任务。
