@@ -38,3 +38,20 @@ HOST-SUFFIX,oaiusercontent.com,AC
 HOST-SUFFIX,client-api.arkoselabs.com,AC
 HOST-SUFFIX,host.livekit.cloud,AC
 HOST-SUFFIX,turn.livekit.cloud,AC
+
+# AI：Anthropic、Claude、Claude Code 及必要服务端点
+HOST-SUFFIX,anthropic.com,AC
+HOST-SUFFIX,claude.ai,AC
+HOST-SUFFIX,claude.com,AC
+HOST-SUFFIX,claude.app,AC
+HOST-SUFFIX,claude.dev,AC
+HOST-SUFFIX,claudeusercontent.com,AC
+HOST-SUFFIX,claudemcpclient.com,AC
+HOST-SUFFIX,claudemcpcontent.com,AC
+HOST-SUFFIX,clau.de,AC
+# 扩展：Artifacts 分享链接
+HOST-SUFFIX,claude.site,AC
+# 补充：认证与官网静态资源
+HOST,anthropic.auth0.com,AC
+HOST,servd-anthropic-website.b-cdn.net,AC
+
